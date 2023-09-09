@@ -1,0 +1,344 @@
+:root {
+  --blue: #01a0f5;
+  --white: #fff;
+}
+
+@font-face {
+  font-family: twitter;
+  src: url("./twitter.TTF");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: twitter;
+  font-weight: 400;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.main-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 298px;
+  height: 279px;
+  /* border: 1px black solid; */
+  transform: scale(2);
+}
+
+.head-container {
+  position: relative;
+  width: 110px;
+  height: 158px;
+  clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
+  background-color: black;
+}
+
+.ears-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 100%;
+  background-color: white;
+}
+
+.face-container {
+  z-index: 100;
+  position: absolute;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  height: 100%;
+}
+
+.eyes-container {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px red solid; */
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* height: 30px; */
+  width: 70px;
+}
+
+.left-eyes {
+  width: 23px;
+  height: 8px;
+  clip-path: polygon(0 0, 0 0, 100% 100%, 20% 80%);
+  /* border: 1px white solid; */
+  background-color: white;
+}
+
+.right-eyes {
+  width: 23px;
+  height: 8px;
+  clip-path: polygon(100% 0, 100% 0, 80% 80%, 0 100%);
+  /* border: 1px white solid; */
+  background-color: white;
+}
+
+.uncovered-area-wrapper {
+  position: absolute;
+  /* border: 1px red solid; */
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.uncovered-area-container {
+  position: relative;
+  width: 87px;
+  height: 67px;
+  clip-path: polygon(5% 0, 95% 0, 100% 100%, 0 100%);
+  background-color: #f3d1b5;
+  /* overflow: hidden; */
+}
+
+.left-chin-cut {
+  position: absolute;
+  width: 27px;
+  height: 25px;
+  /* border: 1px red solid; */
+  bottom: 0;
+  left: 0;
+  clip-path: polygon(0 0, 0 0, 100% 100%, 0% 100%);
+  background-color: black;
+}
+
+.right-chin-cut {
+  position: absolute;
+  z-index: 20;
+  width: 27px;
+  height: 25px;
+  bottom: 0;
+  right: 0;
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%);
+  background-color: black;
+}
+
+.top-lip {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  z-index: 10;
+  transform: translateX(-50%);
+  width: 32px;
+  border-top: 1px black solid;
+  border-radius: 4px;
+  height: 20px;
+}
+
+.bottom-lip {
+  position: absolute;
+  top: 26px;
+  left: 50%;
+  z-index: 9;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 5px;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  background-color: #f3d1b5;
+}
+
+.right-bottom-shade {
+  position: absolute;
+  right: 0px;
+  bottom: -1px;
+  width: 45px;
+  height: 31.5px;
+  clip-path: polygon(70% 0, 97% 22%, 40% 97%);
+  background-color: #daa980;
+}
+
+.top-shade {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 20px;
+  clip-path: polygon(0 0, 100% 0, 50% 100%, 50% 100%);
+  background-color: #dfb28b;
+}
+
+.middle1-shade {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  width: 50%;
+  height: 35px;
+  background-color: #dfb28b;
+}
+
+.middle2-shade {
+  position: absolute;
+  top: 31px;
+  right: 0;
+  z-index: 5;
+  width: 65%;
+  height: 6px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+  background-color: #dfb28b;
+}
+
+.right-shade {
+  position: absolute;
+  right: 0px;
+  top: 0;
+  z-index: 10;
+  width: 16px;
+  height: 45px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
+  background-color: #daa980;
+}
+
+.nose-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 13px;
+  clip-path: polygon(0 0, 100% 0, 50% 100%, 50% 100%);
+  background-color: black;
+}
+
+.left-nose-mask-cut {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 1px;
+  width: 4px;
+  height: 7px;
+  clip-path: polygon(0 0, 100% 22%, 100% 100%);
+  background-color: #f3d1b5;
+}
+
+.right-nose-mask-cut {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 1px;
+  width: 4px;
+  height: 7px;
+  clip-path: polygon(100% 0, 0 22%, 0 100%);
+  background-color: #daa980;
+}
+
+.ear {
+  position: absolute;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  background-color: black;
+}
+
+.left-ear {
+  left: 9px;
+  clip-path: polygon(0 0, 20% 0, 100% 100%, 0 100%);
+}
+
+.right-ear {
+  right: 9px;
+  clip-path: polygon(80% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.head-curve {
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 124px;
+  height: 48px;
+  background-color: black;
+}
+
+.shoulder {
+  position: relative;
+  z-index: 10;
+  margin-top: -0.5px;
+  width: 100%;
+  height: 47px;
+  clip-path: polygon(31.55% 0, 68.45% 0, 100% 100%, 0 100%);
+  background-color: black;
+}
+
+.body {
+  position: relative;
+  margin-top: -0.5px;
+  width: 100%;
+  height: 93px;
+  background-color: black;
+}
+
+.ellipse {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.ellipse1 {
+  top: 0px;
+  left: -38px;
+  width: 101px;
+  height: 69px;
+  background-color: white;
+}
+
+.ellipse2 {
+  top: 38px;
+  left: 9px;
+  width: 142px;
+  height: 114px;
+  background-color: white;
+}
+
+.ellipse3 {
+  top: 38px;
+  right: 9px;
+  width: 142px;
+  height: 114px;
+  background-color: white;
+}
+
+.ellipse4 {
+  top: 0px;
+  right: -38px;
+  width: 101px;
+  height: 69px;
+  background-color: white;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  height: 25px;
+  width: 25px;
+  background: white;
+  /* border: red solid 1px; */
+}
+
+.overlay1 {
+  left: 0;
+}
+
+.overlay2 {
+  right: 0;
+}
