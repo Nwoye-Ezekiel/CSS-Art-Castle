@@ -290,7 +290,7 @@ body {
   top: 14px;
   left: 50%;
   transform: translateX(-50%);
-  width: 124px;
+  width: 140px;
   height: 48px;
   background-color: black;
 }
@@ -307,7 +307,7 @@ body {
 
 .body {
   position: relative;
-  margin-top: -0.5px;
+  margin-top: -0.1px;
   width: 100%;
   height: 93px;
   background-color: black;
@@ -320,15 +320,15 @@ body {
 
 .ellipse1 {
   top: 0px;
-  left: -38px;
-  width: 101px;
-  height: 69px;
+  left: -50px;
+  width: 100px;
+  height: 70px;
   background-color: white;
 }
 
 .ellipse2 {
   top: 38px;
-  left: 9px;
+  left: 7.5px;
   width: 142px;
   height: 114px;
   background-color: white;
@@ -336,7 +336,7 @@ body {
 
 .ellipse3 {
   top: 38px;
-  right: 9px;
+  right: 7.5px;
   width: 142px;
   height: 114px;
   background-color: white;
@@ -344,9 +344,9 @@ body {
 
 .ellipse4 {
   top: 0px;
-  right: -38px;
-  width: 101px;
-  height: 69px;
+  right: -50px;
+  width: 100px;
+  height: 70px;
   background-color: white;
 }
 
