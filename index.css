@@ -140,7 +140,7 @@ body {
   left: 50%;
   z-index: 10;
   transform: translateX(-50%);
-  width: 32px;
+  width: 37px;
   border-top: 1px black solid;
   border-radius: 4px;
   height: 20px;
@@ -152,7 +152,7 @@ body {
   left: 50%;
   z-index: 9;
   transform: translateX(-50%);
-  width: 30px;
+  width: 35px;
   height: 5px;
   clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
   background-color: #f3d1b5;
@@ -162,10 +162,22 @@ body {
   position: absolute;
   right: 0px;
   bottom: -1px;
+  z-index: 5;
   width: 45px;
   height: 31.5px;
   clip-path: polygon(70% 0, 97% 22%, 40% 97%);
   background-color: #daa980;
+}
+
+.middle-bottom-shade {
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+  z-index: 4;
+  width: 45px;
+  height: 31.5px;
+  clip-path: polygon(100% 59%, 0% 100%, 100% 100%);
+  background-color: #dfb28b;
 }
 
 .top-shade {
@@ -209,6 +221,18 @@ body {
   height: 45px;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
   background-color: #daa980;
+}
+
+.middle-right-shade {
+  position: absolute;
+  right: 9.5px;
+  bottom: 0;
+  z-index: 4;
+  width: 25px;
+  height: 50px;
+  background-color: #dfb28b;
+  clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
+  /* border: red solid 1px; */
 }
 
 .nose-mask {
