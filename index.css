@@ -115,6 +115,16 @@ body {
   background-color: #484848;
 }
 
+.nose-highlight4 {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  width: 9px;
+  height: 9.5px;
+  clip-path: polygon(26% 9%, 0 81%, 81% 46%);
+  background-color: #484848;
+}
+
 .forehead-highlight-wrapper {
   position: absolute;
   top: 28px;
