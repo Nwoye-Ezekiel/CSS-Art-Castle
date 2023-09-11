@@ -4,15 +4,15 @@
 }
 
 @font-face {
-  font-family: twitter;
-  src: url("./twitter.TTF");
+  font-family: batman;
+  src: url("./batman.ttf");
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: twitter;
+  font-family: batman;
   font-weight: 400;
 }
 
@@ -30,6 +30,14 @@ body {
   overflow: hidden;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: scale(2);
+}
+
 .main-container {
   position: relative;
   display: flex;
@@ -37,7 +45,6 @@ body {
   align-items: center;
   width: 298px;
   height: 279px;
-  transform: scale(2);
 }
 
 .head-container {
@@ -46,6 +53,48 @@ body {
   height: 158px;
   clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
   background-color: var(--color-black);
+}
+
+.left-ear-cover-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 24px;
+  background-color: white;
+  animation: hide 1s 1.7s ease forwards;
+}
+
+.left-ear-cover-curve {
+  position: absolute;
+  bottom: -8px;
+  right: -17px;
+  border-radius: 50%;
+  width: 41px;
+  height: 12px;
+  background-color: black;
+  transform: rotate(339deg);
+}
+
+.right-ear-cover-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 24px;
+  background-color: white;
+  animation: hide 1s 1.7s ease forwards;
+}
+
+.right-ear-cover-curve {
+  position: absolute;
+  bottom: -8px;
+  left: -17px;
+  border-radius: 50%;
+  width: 41px;
+  height: 12px;
+  background-color: black;
+  transform: rotate(-339deg);
 }
 
 .ears-container {
@@ -65,6 +114,8 @@ body {
   background-color: var(--color-black);
   left: 9px;
   clip-path: polygon(0 0, 20% 0, 100% 100%, 0 100%);
+  transform: translateY(150px);
+  animation: slide-up 1s 2.1s ease forwards;
 }
 
 .right-ear {
@@ -75,6 +126,8 @@ body {
   background-color: var(--color-black);
   right: 9px;
   clip-path: polygon(80% 0, 100% 0, 100% 100%, 0 100%);
+  transform: translateY(150px);
+  animation: slide-up 1s 2.1s ease forwards;
 }
 
 .top-head-curve {
@@ -236,7 +289,9 @@ body {
 }
 
 .eyes-container {
+  visibility: hidden;
   filter: drop-shadow(0 0 5px white);
+  animation: show 1s 5.6s ease forwards, fade-in 1s 5.6s ease;
 }
 
 .left-eyes {
@@ -257,7 +312,7 @@ body {
   position: absolute;
   top: 83.2px;
   left: -2px;
-  width: 5.5px;
+  width: 5.6px;
   height: 10px;
   z-index: 50;
   clip-path: polygon(6% 0, 100% 22%, 100% 98%, 0 82%);
@@ -383,14 +438,14 @@ body {
 
 .top-lip {
   position: absolute;
-  top: 25px;
   left: 50%;
   z-index: 10;
   transform: translateX(-50%);
   width: 37px;
-  border-top: 1px var(--color-black) solid;
-  border-radius: 4px;
   height: 20px;
+  top: 25px;
+  border-top: 1px var(--color-black) solid;
+  animation: droop-lip 0.5s 2.6s ease forwards;
 }
 
 .bottom-lip {
@@ -683,4 +738,122 @@ body {
   height: 6.5px;
   clip-path: polygon(0 0, 65% 38%, 82% 100%, 0 46%);
   background-color: #484848;
+}
+
+.bat-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.bat-container svg {
+  width: 100%;
+  height: 100%;
+}
+
+.shadow {
+  filter: blur(6px);
+  opacity: 0.2;
+}
+
+.bat {
+  animation: fly-bat 5.5s forwards ease-in-out normal;
+}
+
+.left-wing {
+  transform-origin: 50% 50%;
+  animation: flap-left-wing 1s ease-in-out normal infinite;
+  animation-iteration-count: 6;
+}
+
+.right-wing {
+  transform-origin: 50% 50%;
+  animation: flap-right-wing 1s ease-in-out normal infinite;
+  animation-iteration-count: 6;
+}
+
+.batman-title {
+  margin-top: 10px;
+  visibility: hidden;
+  animation: show 1s 5.6s ease forwards, fade-in 1s 5.6s ease;
+}
+
+@keyframes show {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes hide {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes droop-lip {
+  100% {
+    border-radius: 4px;
+  }
+}
+
+@keyframes fly-bat {
+  0% {
+    transform: translate(68%, -25%) rotate(0deg);
+  }
+  50% {
+    transform: translate(25%, -25%) rotate(-10deg);
+  }
+  100% {
+    transform: translate(50%, -20%) rotate(25deg);
+  }
+}
+
+@keyframes flap-left-wing {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(0, 0) scaleX(0.5) rotate(-40deg);
+  }
+  100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes flap-right-wing {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(0, 0) scaleX(0.5) rotate(40deg);
+  }
+  100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
 }
