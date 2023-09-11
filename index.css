@@ -1,5 +1,6 @@
 :root {
   --color-white: #fff;
+  --color-lip: #744d2e;
   --color-skin: #f3d1b5;
   --color-black: #050608;
   --color-highlight: #484848;
@@ -447,7 +448,7 @@ body {
   height: 20px;
   position: absolute;
   transform: translateX(-50%);
-  border-top: 1px var(--color-black) solid;
+  border-top: 1px var(--color-lip) solid;
   animation: droop-lip 0.5s 1.2s ease forwards;
 }
 
