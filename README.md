@@ -6,4 +6,4 @@ View Live [Here](https://nwoye-ezekiel.github.io/CSS-Art-Batman/)
 
 ### Reference Image
 
-![Batman](/Batman.jpeg)
+![Batman](/batman.jpeg)
