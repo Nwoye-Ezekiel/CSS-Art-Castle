@@ -504,7 +504,7 @@ body {
   right: -29.5px;
   height: 31.5px;
   position: absolute;
-  transform: rotate(339deg);
+  transform: rotate(340deg);
   background-color: var(--color-dark-shade);
   clip-path: polygon(68% 0, 97% 22%, 40% 97%);
 }
