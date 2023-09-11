@@ -693,7 +693,7 @@ body {
   z-index: 101;
   left: 131.5px;
   width: 18.5px;
-  bottom: 103.8px;
+  bottom: 104px;
   position: absolute;
   background-color: var(--color-highlight);
   clip-path: polygon(1% 85%, 0 0, 54% 0, 64% 67%);
