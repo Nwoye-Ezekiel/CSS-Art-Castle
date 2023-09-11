@@ -223,8 +223,8 @@ body {
 }
 
 .forehead-bottom-highlight-container {
-  top: 5px;
-  left: 5px;
+  top: 6px;
+  left: 6px;
   width: 70px;
   z-index: 20;
   height: 40px;
@@ -313,14 +313,14 @@ body {
 }
 
 .left-cheek-highlight {
-  left: -2px;
-  top: 83.2px;
+  left: -3px;
+  top: 81.2px;
   z-index: 50;
-  width: 5.6px;
-  height: 10px;
+  width: 6.5px;
+  height: 12px;
   position: absolute;
   background-color: var(--color-highlight);
-  clip-path: polygon(6% 0, 100% 22%, 100% 98%, 0 82%);
+  clip-path: polygon(10% 0, 100% 25%, 92% 97%, 0 82%);
 }
 
 .nose-highlights-container {
