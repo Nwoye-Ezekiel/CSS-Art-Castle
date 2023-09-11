@@ -36,7 +36,6 @@ body {
 
 .wrapper {
   display: flex;
-  transform: scale(1);
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -66,7 +65,7 @@ body {
   height: 24px;
   position: absolute;
   background-color: var(--color-white);
-  animation: hide 1s 1.7s ease forwards;
+  animation: hide 1s 0.3s ease forwards;
 }
 
 .left-ear-cover-curve {
@@ -87,7 +86,7 @@ body {
   height: 24px;
   position: absolute;
   background-color: var(--color-white);
-  animation: hide 1s 1.7s ease forwards;
+  animation: hide 1s 0.3s ease forwards;
 }
 
 .right-ear-cover-curve {
@@ -118,7 +117,7 @@ body {
   position: absolute;
   transform: translateY(150px);
   background-color: var(--color-black);
-  animation: slide-up 1s 2.1s ease forwards;
+  animation: slide-up 1s 0.7s ease forwards;
   clip-path: polygon(0 0, 20% 0, 100% 100%, 0 100%);
 }
 
@@ -130,7 +129,7 @@ body {
   position: absolute;
   transform: translateY(150px);
   background-color: var(--color-black);
-  animation: slide-up 1s 2.1s ease forwards;
+  animation: slide-up 1s 0.7s ease forwards;
   clip-path: polygon(80% 0, 100% 0, 100% 100%, 0 100%);
 }
 
@@ -295,7 +294,7 @@ body {
 .eyes-container {
   visibility: hidden;
   filter: drop-shadow(0 0 5px var(--color-white));
-  animation: show 1s 5.6s ease forwards, fade-in 1s 5.6s ease;
+  animation: show 1s 3s ease forwards, fade-in 1s 3s ease;
 }
 
 .left-eyes {
@@ -449,7 +448,7 @@ body {
   position: absolute;
   transform: translateX(-50%);
   border-top: 1px var(--color-black) solid;
-  animation: droop-lip 0.5s 2.6s ease forwards;
+  animation: droop-lip 0.5s 1.2s ease forwards;
 }
 
 .bottom-lip {
@@ -744,38 +743,10 @@ body {
   clip-path: polygon(0 0, 65% 38%, 82% 100%, 0 46%);
 }
 
-.bat-container {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  position: fixed;
-}
-
-.bat-container svg {
-  width: 100%;
-  height: 100%;
-}
-
-.bat {
-  animation: fly-bat 5.5s forwards ease-in-out normal;
-}
-
-.left-wing {
-  transform-origin: 50% 50%;
-  animation: flap-left-wing 1s ease-in-out 6 normal;
-}
-
-.right-wing {
-  transform-origin: 50% 50%;
-  animation: flap-right-wing 1s ease-in-out 6 normal;
-}
-
 .batman-title {
   margin-top: 10px;
   visibility: hidden;
-  animation: show 1s 5.6s ease forwards, fade-in 1s 5.6s ease;
+  animation: show 1s 3s ease forwards, fade-in 1s 3s ease;
 }
 
 @keyframes hide {
@@ -814,42 +785,6 @@ body {
 @keyframes droop-lip {
   100% {
     border-radius: 4px;
-  }
-}
-
-@keyframes fly-bat {
-  0% {
-    transform: translate(68%, -25%) rotate(0deg);
-  }
-  50% {
-    transform: translate(25%, -25%) rotate(-10deg);
-  }
-  100% {
-    transform: translate(50%, -20%) rotate(25deg);
-  }
-}
-
-@keyframes flap-left-wing {
-  0% {
-    transform: translate(0, 0) scale(1) rotate(0deg);
-  }
-  50% {
-    transform: translate(0, 0) scaleX(0.5) rotate(-40deg);
-  }
-  100% {
-    transform: translate(0, 0) scale(1) rotate(0deg);
-  }
-}
-
-@keyframes flap-right-wing {
-  0% {
-    transform: translate(0, 0) scale(1) rotate(0deg);
-  }
-  50% {
-    transform: translate(0, 0) scaleX(0.5) rotate(40deg);
-  }
-  100% {
-    transform: translate(0, 0) scale(1) rotate(0deg);
   }
 }
 
