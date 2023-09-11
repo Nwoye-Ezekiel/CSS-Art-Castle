@@ -505,6 +505,107 @@ body {
   width: 100%;
   height: 93px;
   background-color: var(--color-black);
+  overflow: hidden;
+}
+
+.body-highlight1 {
+  position: absolute;
+  bottom: 60px;
+  right: 20px;
+  z-index: 50;
+  /* border: red solid 1px; */
+  width: 88.5px;
+  height: 28px;
+  clip-path: polygon(0 0, 100% 22%, 68% 100%, 3% 23%);
+  background-color: #484848;
+}
+
+.body-highlight2 {
+  position: absolute;
+  bottom: 80px;
+  left: 20px;
+  /* border: red solid 1px; */
+  z-index: 50;
+  width: 75px;
+  height: 40.5px;
+  clip-path: polygon(0 91%, 96% 0, 99% 40%, 9% 100%);
+  background-color: #484848;
+}
+.body-highlight3 {
+  position: absolute;
+  bottom: 77px;
+  right: 135px;
+  z-index: 50;
+  width: 8.5px;
+  height: 31px;
+  clip-path: polygon(0 100%, 0 20%, 100% 6%, 55% 95%);
+  background-color: #484848;
+}
+
+.body-highlight4 {
+  position: absolute;
+  bottom: 77px;
+  left: 127.6px;
+  z-index: 101;
+  width: 16px;
+  height: 48px;
+  clip-path: polygon(51% 94%, 0 0, 27% 9%, 69% 100%);
+  background-color: #484848;
+}
+
+.body-highlight5 {
+  position: absolute;
+  bottom: 103.8px;
+  left: 131.5px;
+  z-index: 101;
+  width: 13.5px;
+  height: 17px;
+  clip-path: polygon(17% 85%, 0 0, 54% 0, 64% 67%);
+  background-color: #484848;
+}
+
+.body-highlight6 {
+  position: absolute;
+  bottom: 91px;
+  left: 91.8px;
+  z-index: 101;
+  width: 15px;
+  height: 20.5px;
+  clip-path: polygon(100% 100%, 15% 36%, 7% 0, 93% 66%);
+  background-color: #484848;
+}
+
+.body-highlight7 {
+  position: absolute;
+  bottom: 86px;
+  left: 96.8px;
+  z-index: 101;
+  width: 14px;
+  height: 57px;
+  clip-path: polygon(70% 91%, 26% 8%, 45% 15%, 100% 99%);
+  background-color: #484848;
+}
+
+.body-highlight8 {
+  position: absolute;
+  bottom: 97px;
+  left: 100.5px;
+  z-index: 101;
+  width: 7px;
+  height: 8.5px;
+  clip-path: polygon(0 0, 76% 60%, 82% 100%, 0 31%);
+  background-color: #484848;
+}
+
+.body-highlight9 {
+  position: absolute;
+  bottom: 100px;
+  left: 102.5px;
+  z-index: 101;
+  width: 4px;
+  height: 6.5px;
+  clip-path: polygon(0 0, 65% 38%, 82% 100%, 0 46%);
+  background-color: #484848;
 }
 
 .ellipse {
@@ -518,6 +619,18 @@ body {
   width: 100px;
   height: 70px;
   background-color: white;
+  z-index: 50;
+}
+
+.ellipse1::after {
+  position: absolute;
+  content: '';
+  top: -1px;
+  left: -1px;
+  width: 100px;
+  height: 70px;
+  border: black solid 1px;
+  border-radius: 50%;
 }
 
 .ellipse2 {
@@ -526,6 +639,7 @@ body {
   width: 142px;
   height: 114px;
   background-color: white;
+  z-index: 60;
 }
 
 .ellipse3 {
@@ -534,6 +648,7 @@ body {
   width: 142px;
   height: 114px;
   background-color: white;
+  z-index: 60;
 }
 
 .ellipse4 {
@@ -542,6 +657,18 @@ body {
   width: 100px;
   height: 70px;
   background-color: white;
+  z-index: 50;
+}
+
+.ellipse4::after {
+  position: absolute;
+  content: '';
+  top: -1px;
+  right: -1px;
+  width: 100px;
+  height: 70px;
+  border: black solid 1px;
+  border-radius: 50%;
 }
 
 .overlay {
@@ -550,7 +677,7 @@ body {
   height: 25px;
   width: 25px;
   background: white;
-  /* border: red solid 1px; */
+  z-index: 50;
 }
 
 .overlay1 {
