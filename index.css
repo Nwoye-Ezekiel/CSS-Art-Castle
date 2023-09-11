@@ -629,9 +629,9 @@ body {
 .left-body-overlay {
   left: 0;
   bottom: 0;
-  width: 25px;
-  z-index: 60;
-  height: 25px;
+  z-index: 70;
+  width: 109px;
+  height: 44px;
   position: absolute;
   background: var(--color-white);
 }
@@ -639,9 +639,9 @@ body {
 .right-body-overlay {
   right: 0;
   bottom: 0;
-  width: 25px;
-  z-index: 60;
-  height: 25px;
+  z-index: 70;
+  width: 109px;
+  height: 44px;
   position: absolute;
   background: var(--color-white);
 }
@@ -770,11 +770,6 @@ body {
 .right-wing {
   transform-origin: 50% 50%;
   animation: flap-right-wing 1s ease-in-out 6 normal;
-}
-
-.bat-shadow {
-  opacity: 0.1;
-  filter: blur(6px);
 }
 
 .batman-title {
