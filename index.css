@@ -346,13 +346,13 @@ body {
   left: 50%;
   z-index: 9;
   transform: translateX(-50%);
-  width: 35px;
+  width: 34.5px;
   height: 5px;
   clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
   background-color: #f3d1b5;
 }
 
-.right-bottom-shade {
+/* .right-bottom-shade {
   position: absolute;
   right: 0px;
   bottom: -1px;
@@ -361,6 +361,19 @@ body {
   height: 31.5px;
   clip-path: polygon(70% 0, 97% 22%, 40% 97%);
   background-color: #daa980;
+} */
+
+.right-bottom-shade {
+  position: absolute;
+  right: -29.5px;
+  bottom: 2px;
+  z-index: 220;
+  width: 104px;
+  height: 31.5px;
+  clip-path: polygon(68% 0, 97% 22%, 40% 97%);
+  background-color: #daa980;
+  transform: rotate(339deg);
+  /* border: red solid 1px; */
 }
 
 .middle-bottom-shade {
@@ -408,12 +421,13 @@ body {
 
 .right-shade {
   position: absolute;
-  right: 0px;
+  right: 1px;
   top: 0;
   z-index: 10;
-  width: 16px;
+  /* width: 16px; */
+  width: 15px;
   height: 45px;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 26% 100%);
   background-color: #daa980;
 }
 
@@ -533,11 +547,11 @@ body {
 }
 .body-highlight3 {
   position: absolute;
-  bottom: 77px;
+  bottom: 78px;
   right: 135px;
   z-index: 50;
   width: 8.5px;
-  height: 31px;
+  height: 33px;
   clip-path: polygon(0 100%, 0 20%, 100% 6%, 55% 95%);
   background-color: #484848;
 }
@@ -547,7 +561,7 @@ body {
   bottom: 77px;
   left: 127.6px;
   z-index: 101;
-  width: 16px;
+  width: 18px;
   height: 48px;
   clip-path: polygon(51% 94%, 0 0, 27% 9%, 69% 100%);
   background-color: #484848;
@@ -558,9 +572,9 @@ body {
   bottom: 103.8px;
   left: 131.5px;
   z-index: 101;
-  width: 13.5px;
+  width: 18.5px;
   height: 17px;
-  clip-path: polygon(17% 85%, 0 0, 54% 0, 64% 67%);
+  clip-path: polygon(1% 85%, 0 0, 54% 0, 64% 67%);
   background-color: #484848;
 }
 
@@ -624,7 +638,7 @@ body {
 
 .ellipse1::after {
   position: absolute;
-  content: '';
+  content: "";
   top: -1px;
   left: -1px;
   width: 100px;
@@ -662,7 +676,7 @@ body {
 
 .ellipse4::after {
   position: absolute;
-  content: '';
+  content: "";
   top: -1px;
   right: -1px;
   width: 100px;
