@@ -1,6 +1,10 @@
 :root {
+  --color-white: #fff;
+  --color-skin: #f3d1b5;
   --color-black: #050608;
-  --white: #fff;
+  --color-highlight: #484848;
+  --color-dark-shade: #daa980;
+  --color-light-shade: #dfb28b;
 }
 
 @font-face {
@@ -11,9 +15,9 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: batman;
   font-weight: 400;
+  font-family: batman;
+  box-sizing: border-box;
 }
 
 html,
@@ -23,742 +27,735 @@ body {
 
 body {
   height: 100%;
-  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }
 
 .wrapper {
   display: flex;
+  transform: scale(2);
+  align-items: center;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  transform: scale(2);
 }
 
 .main-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 298px;
   height: 279px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
 }
 
 .head-container {
-  position: relative;
   width: 110px;
   height: 158px;
-  clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
+  position: relative;
   background-color: var(--color-black);
+  clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
 }
 
 .left-ear-cover-container {
-  position: absolute;
   top: 0;
   left: 0;
   width: 20px;
   height: 24px;
-  background-color: white;
+  position: absolute;
+  background-color: var(--color-white);
   animation: hide 1s 1.7s ease forwards;
 }
 
 .left-ear-cover-curve {
-  position: absolute;
-  bottom: -8px;
-  right: -17px;
-  border-radius: 50%;
   width: 41px;
+  right: -17px;
   height: 12px;
-  background-color: black;
+  bottom: -8px;
+  position: absolute;
+  border-radius: 50%;
   transform: rotate(339deg);
+  background-color: var(--color-black);
 }
 
 .right-ear-cover-container {
-  position: absolute;
   top: 0;
   right: 0;
   width: 20px;
   height: 24px;
-  background-color: white;
+  position: absolute;
+  background-color: var(--color-white);
   animation: hide 1s 1.7s ease forwards;
 }
 
 .right-ear-cover-curve {
-  position: absolute;
-  bottom: -8px;
   left: -17px;
-  border-radius: 50%;
   width: 41px;
   height: 12px;
-  background-color: black;
+  bottom: -8px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--color-black);
   transform: rotate(-339deg);
 }
 
 .ears-container {
-  position: absolute;
   top: 0;
   left: 0;
-  height: 20px;
   width: 100%;
-  background-color: white;
+  height: 20px;
+  position: absolute;
+  background-color: var(--color-white);
 }
 
 .left-ear {
-  position: absolute;
   top: 0;
+  left: 9px;
   width: 11px;
   height: 100%;
-  background-color: var(--color-black);
-  left: 9px;
-  clip-path: polygon(0 0, 20% 0, 100% 100%, 0 100%);
+  position: absolute;
   transform: translateY(150px);
+  background-color: var(--color-black);
   animation: slide-up 1s 2.1s ease forwards;
+  clip-path: polygon(0 0, 20% 0, 100% 100%, 0 100%);
 }
 
 .right-ear {
-  position: absolute;
   top: 0;
+  right: 9px;
   width: 11px;
   height: 100%;
-  background-color: var(--color-black);
-  right: 9px;
-  clip-path: polygon(80% 0, 100% 0, 100% 100%, 0 100%);
+  position: absolute;
   transform: translateY(150px);
+  background-color: var(--color-black);
   animation: slide-up 1s 2.1s ease forwards;
+  clip-path: polygon(80% 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .top-head-curve {
-  position: absolute;
-  border-radius: 50%;
   top: 14px;
   left: 50%;
-  transform: translateX(-50%);
   width: 120px;
   height: 48px;
+  position: absolute;
+  border-radius: 50%;
+  transform: translateX(-50%);
   background-color: var(--color-black);
 }
 
 .midline-area {
+  width: 70px;
+  height: 100%;
   z-index: 100;
   position: absolute;
-  height: 100%;
-  width: 70px;
 }
 
 .forehead-highlights-container {
-  position: absolute;
   top: 28px;
   left: 50%;
-  transform: translateX(-50%);
   width: 70px;
   height: 40px;
   overflow: hidden;
+  position: absolute;
+  transform: translateX(-50%);
 }
 
 .top-forehead-highlight-curve1 {
-  position: absolute;
-  border-radius: 50%;
   top: -7px;
   left: -12px;
   width: 22px;
   z-index: 30;
   height: 23px;
+  position: absolute;
+  border-radius: 50%;
   background-color: var(--color-black);
 }
 
 .top-forehead-highlight-container {
-  position: absolute;
   top: 0;
   left: 0;
   width: 70px;
   height: 40px;
   overflow: hidden;
+  position: absolute;
 }
 
 .top-forehead-highlight-curve2 {
-  position: absolute;
-  border-radius: 50%;
   top: 0;
   left: -10px;
   width: 92px;
   height: 44px;
-  background-color: #484848;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--color-highlight);
 }
 
 .right-top-forehead-highlight-curve-container {
-  position: absolute;
   top: 4px;
   right: -3px;
   width: 14px;
   height: 24px;
+  position: absolute;
 }
 
 .right-top-forehead-highlight-curve1 {
-  position: absolute;
-  border-radius: 50%;
   top: 1.1px;
-  z-index: 10;
   left: 0.7px;
   width: 10px;
+  z-index: 10;
   height: 20px;
-  background-color: #484848;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--color-highlight);
 }
 
 .right-top-forehead-highlight-curve2 {
-  position: absolute;
-  border-radius: 50%;
   top: 1px;
-  z-index: 5;
-  background-color: var(--color-black);
   left: 4px;
+  z-index: 5;
   width: 10px;
   height: 11px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--color-black);
 }
 
 .forehead-bottom-highlight-container {
-  position: absolute;
-  z-index: 20;
   top: 5px;
   left: 5px;
   width: 70px;
+  z-index: 20;
   height: 40px;
   overflow: hidden;
+  position: absolute;
 }
 
 .forehead-bottom-highlight-curve1 {
-  position: absolute;
-  border-radius: 50%;
   top: 0;
   left: -15px;
   width: 91px;
   height: 43px;
+  position: absolute;
+  border-radius: 50%;
   background-color: var(--color-black);
 }
 
 .forehead-bottom-highlight-curve2 {
-  position: absolute;
-  border-radius: 50%;
   top: -10px;
   left: -13px;
   width: 22px;
   height: 23px;
-  background-color: #484848;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--color-highlight);
 }
 
 .right-forehead-bottom-highlight-curve-container {
-  position: absolute;
   top: 4px;
   right: -3px;
   width: 14px;
   height: 24px;
+  position: absolute;
 }
 
 .right-forehead-bottom-highlight-curve1 {
-  position: absolute;
-  border-radius: 50%;
   top: 3px;
-  z-index: 20;
   left: 0.7px;
   width: 10px;
+  z-index: 20;
   height: 20px;
+  position: absolute;
+  border-radius: 50%;
   background-color: var(--color-black);
 }
 
 .right-forehead-bottom-highlight-curve2 {
-  position: absolute;
-  border-radius: 50%;
   top: 3px;
-  z-index: 15;
-  background-color: #484848;
   left: 4px;
   width: 10px;
+  z-index: 15;
   height: 11px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--color-highlight);
 }
 
 .eyes-wrapper {
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
   top: 72px;
   left: 50%;
-  transform: translateX(-50%);
   width: 70px;
+  display: flex;
+  position: absolute;
+  transform: translateX(-50%);
+  justify-content: space-between;
 }
 
 .eyes-container {
   visibility: hidden;
-  filter: drop-shadow(0 0 5px white);
+  filter: drop-shadow(0 0 5px var(--color-white));
   animation: show 1s 5.6s ease forwards, fade-in 1s 5.6s ease;
 }
 
 .left-eyes {
   width: 23px;
   height: 8px;
+  background-color: var(--color-white);
   clip-path: polygon(0 0, 0 0, 100% 100%, 20% 80%);
-  background-color: white;
 }
 
 .right-eyes {
   width: 23px;
   height: 8px;
+  background-color: var(--color-white);
   clip-path: polygon(100% 0, 100% 0, 80% 80%, 0 100%);
-  background-color: white;
 }
 
 .left-cheek-highlight {
-  position: absolute;
-  top: 83.2px;
   left: -2px;
+  top: 83.2px;
+  z-index: 50;
   width: 5.6px;
   height: 10px;
-  z-index: 50;
+  position: absolute;
+  background-color: var(--color-highlight);
   clip-path: polygon(6% 0, 100% 22%, 100% 98%, 0 82%);
-  background-color: #484848;
 }
 
 .nose-highlights-container {
-  position: absolute;
-  top: 81.5px;
   right: 50%;
+  top: 81.5px;
   width: 19px;
   z-index: 50;
+  position: absolute;
 }
 
 .nose-highlight1 {
-  position: absolute;
   top: 0;
   left: 1px;
   width: 10.5px;
   height: 18.5px;
+  position: absolute;
+  background-color: var(--color-highlight);
   clip-path: polygon(100% 4%, 0 70%, 93% 100%);
-  background-color: #484848;
 }
 
 .nose-highlight2 {
-  position: absolute;
   top: 0;
   right: 0;
   width: 8.5px;
   height: 22px;
+  position: absolute;
+  background-color: var(--color-highlight);
   clip-path: polygon(0 0, 100% 12%, 100% 95%, 0 83.5%);
-  background-color: #484848;
 }
 
 .nose-highlight3 {
-  position: absolute;
-  top: -0.5px;
   right: 0;
+  top: -0.5px;
   width: 9.5px;
   height: 10px;
+  position: absolute;
+  background-color: var(--color-highlight);
   clip-path: polygon(0 0, 100% 100%, 100% 30%);
-  background-color: #484848;
 }
 
 .nose-highlight4 {
-  position: absolute;
   top: -6px;
-  right: -10px;
   width: 9px;
+  right: -10px;
   height: 9.5px;
+  position: absolute;
+  background-color: var(--color-highlight);
   clip-path: polygon(25% 9%, 0 81%, 81% 50%);
-  background-color: #484848;
 }
 
 .uncovered-area-wrapper {
-  position: absolute;
   top: 90px;
   left: 50%;
+  position: absolute;
   transform: translateX(-50%);
 }
 
 .nose-mask {
-  position: absolute;
   top: 0;
   left: 0;
-  z-index: 10;
   width: 100%;
+  z-index: 10;
   height: 13px;
-  clip-path: polygon(0 0, 100% 0, 50% 100%, 50% 100%);
+  position: absolute;
   background-color: var(--color-black);
+  clip-path: polygon(0 0, 100% 0, 50% 100%, 50% 100%);
 }
 
 .left-cheek-nose-mask-cut {
-  position: absolute;
-  z-index: 10;
   top: 0;
   left: 1px;
   width: 4px;
   height: 7px;
+  z-index: 10;
+  position: absolute;
+  background-color: var(--color-skin);
   clip-path: polygon(0 0, 100% 22%, 100% 100%);
-  background-color: #f3d1b5;
 }
 
 .right-cheek-nose-mask-cut {
-  position: absolute;
-  z-index: 10;
   top: 0;
   right: 1px;
   width: 4px;
   height: 7px;
+  z-index: 10;
+  position: absolute;
   clip-path: polygon(100% 0, 0 22%, 0 100%);
-  background-color: #daa980;
+  background-color: var(--color-dark-shade);
 }
 
 .uncovered-area-container {
-  position: relative;
   width: 87px;
   height: 67px;
+  position: relative;
+  background-color: var(--color-skin);
   clip-path: polygon(5% 0, 95% 0, 100% 100%, 0 100%);
-  background-color: #f3d1b5;
 }
 
 .nose-mask-shade {
-  position: absolute;
-  top: -1px;
   left: 0;
+  top: -1px;
   z-index: 5;
   width: 100%;
   height: 20px;
+  position: absolute;
+  background-color: var(--color-light-shade);
   clip-path: polygon(0 0, 100% 0, 50% 100%, 50% 100%);
-  background-color: #dfb28b;
 }
 
 .top-lip-shade {
-  position: absolute;
   top: 0;
   right: 0;
-  z-index: 5;
   width: 50%;
+  z-index: 5;
   height: 35px;
-  background-color: #dfb28b;
+  position: absolute;
+  background-color: var(--color-light-shade);
 }
 
 .top-lip {
-  position: absolute;
-  left: 50%;
-  z-index: 10;
-  transform: translateX(-50%);
-  width: 37px;
-  height: 20px;
   top: 25px;
+  left: 50%;
+  width: 37px;
+  z-index: 10;
+  height: 20px;
+  position: absolute;
+  transform: translateX(-50%);
   border-top: 1px var(--color-black) solid;
   animation: droop-lip 0.5s 2.6s ease forwards;
 }
 
 .bottom-lip {
-  position: absolute;
   top: 26px;
   left: 50%;
   z-index: 9;
-  transform: translateX(-50%);
-  width: 34.5px;
   height: 5px;
+  width: 34.5px;
+  position: absolute;
+  transform: translateX(-50%);
+  background-color: var(--color-skin);
   clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
-  background-color: #f3d1b5;
 }
 
 .bottom-lip-shade {
-  position: absolute;
-  top: 31px;
   right: 0;
-  z-index: 5;
+  top: 31px;
   width: 65%;
+  z-index: 5;
   height: 6px;
+  position: absolute;
+  background-color: var(--color-light-shade);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
-  background-color: #dfb28b;
 }
 
 .right-cheek-shade {
-  position: absolute;
-  right: 1px;
   top: 0;
-  z-index: 10;
+  right: 1px;
   width: 15px;
+  z-index: 10;
   height: 45px;
+  position: absolute;
+  background-color: var(--color-dark-shade);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 26% 100%);
-  background-color: #daa980;
 }
 
 .top-chin-shade {
-  position: absolute;
-  right: 9.5px;
   bottom: 0;
   z-index: 4;
   width: 25px;
+  right: 9.5px;
   height: 50px;
-  background-color: #dfb28b;
+  position: absolute;
+  background-color: var(--color-light-shade);
   clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .right-jaw-shade {
-  position: absolute;
-  right: -29.5px;
   bottom: 2px;
-  z-index: 220;
   width: 104px;
+  z-index: 220;
+  right: -29.5px;
   height: 31.5px;
-  clip-path: polygon(68% 0, 97% 22%, 40% 97%);
-  background-color: #daa980;
+  position: absolute;
   transform: rotate(339deg);
+  background-color: var(--color-dark-shade);
+  clip-path: polygon(68% 0, 97% 22%, 40% 97%);
 }
 
 .left-jaw-cover {
-  position: absolute;
+  left: 0;
+  bottom: 0;
   width: 27px;
   height: 25px;
-  bottom: 0;
-  left: 0;
-  clip-path: polygon(0 0, 0 0, 100% 100%, 0% 100%);
+  position: absolute;
   background-color: var(--color-black);
+  clip-path: polygon(0 0, 0 0, 100% 100%, 0% 100%);
 }
 
 .bottom-chin-shade {
-  position: absolute;
-  right: 15px;
   bottom: 0;
   z-index: 4;
+  right: 15px;
   width: 45px;
   height: 31.5px;
+  position: absolute;
+  background-color: var(--color-light-shade);
   clip-path: polygon(100% 59%, 0% 100%, 100% 100%);
-  background-color: #dfb28b;
 }
 
 .right-jaw-cover {
-  position: absolute;
-  z-index: 20;
-  width: 27px;
-  height: 25px;
-  bottom: 0;
   right: 0;
-  clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%);
+  bottom: 0;
+  width: 27px;
+  z-index: 20;
+  height: 25px;
+  position: absolute;
   background-color: var(--color-black);
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .shoulder {
-  position: relative;
-  z-index: 10;
-  margin-top: -0.5px;
   width: 100%;
+  z-index: 10;
   height: 47px;
-  clip-path: polygon(31.55% 0, 68.45% 0, 100% 100%, 0 100%);
+  position: relative;
+  margin-top: -0.5px;
   background-color: var(--color-black);
+  clip-path: polygon(31.55% 0, 68.45% 0, 100% 100%, 0 100%);
 }
 
 .body {
-  position: relative;
-  margin-top: -0.1px;
   width: 100%;
   height: 93px;
-  background-color: var(--color-black);
   overflow: hidden;
+  position: relative;
+  margin-top: -0.1px;
+  background-color: var(--color-black);
 }
 
 .body-curve1 {
-  position: absolute;
-  border-radius: 50%;
   top: 0px;
   left: -50px;
+  z-index: 60;
   width: 100px;
   height: 70px;
-  background-color: white;
-  z-index: 60;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--color-white);
 }
 
 .body-curve1::after {
-  position: absolute;
-  content: "";
   top: -1px;
   left: -1px;
+  content: "";
   width: 100px;
   height: 70px;
-  border: black solid 1px;
+  position: absolute;
   border-radius: 50%;
+  border: var(--color-black) solid 1px;
 }
 
 .body-curve2 {
-  position: absolute;
-  border-radius: 50%;
   top: 38px;
   left: 7.5px;
+  z-index: 70;
   width: 142px;
   height: 114px;
-  background-color: white;
-  z-index: 70;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--color-white);
 }
 
 .body-curve3 {
-  position: absolute;
-  border-radius: 50%;
   top: 38px;
+  z-index: 70;
   right: 7.5px;
   width: 142px;
   height: 114px;
-  background-color: white;
-  z-index: 70;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--color-white);
 }
 
 .body-curve4 {
-  position: absolute;
-  border-radius: 50%;
   top: 0px;
+  z-index: 60;
   right: -50px;
   width: 100px;
   height: 70px;
-  background-color: white;
-  z-index: 60;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--color-white);
 }
 
 .body-curve4::after {
-  position: absolute;
-  content: "";
   top: -1px;
   right: -1px;
+  content: "";
   width: 100px;
   height: 70px;
-  border: black solid 1px;
+  position: absolute;
   border-radius: 50%;
+  border: var(--color-black) solid 1px;
 }
 
 .left-body-overlay {
-  position: absolute;
-  bottom: 0;
-  height: 25px;
-  width: 25px;
-  background: white;
-  z-index: 60;
   left: 0;
+  bottom: 0;
+  width: 25px;
+  z-index: 60;
+  height: 25px;
+  position: absolute;
+  background: var(--color-white);
 }
 
 .right-body-overlay {
-  position: absolute;
-  bottom: 0;
-  height: 25px;
-  width: 25px;
-  background: white;
-  z-index: 60;
   right: 0;
+  bottom: 0;
+  width: 25px;
+  z-index: 60;
+  height: 25px;
+  position: absolute;
+  background: var(--color-white);
 }
 
 .body-highlight1 {
-  position: absolute;
-  bottom: 60px;
   right: 20px;
   z-index: 50;
-  width: 88.5px;
+  bottom: 60px;
   height: 28px;
+  width: 88.5px;
+  position: absolute;
+  background-color: var(--color-highlight);
   clip-path: polygon(0 0, 100% 22%, 68% 100%, 3% 23%);
-  background-color: #484848;
 }
 
 .body-highlight2 {
-  position: absolute;
-  bottom: 80px;
   left: 20px;
-  z-index: 50;
   width: 75px;
+  z-index: 50;
+  bottom: 80px;
   height: 40.5px;
+  position: absolute;
+  background-color: var(--color-highlight);
   clip-path: polygon(0 91%, 96% 0, 99% 40%, 9% 100%);
-  background-color: #484848;
 }
 .body-highlight3 {
-  position: absolute;
-  bottom: 78px;
-  right: 135px;
   z-index: 50;
+  right: 135px;
   width: 8.5px;
+  bottom: 78px;
   height: 33px;
+  position: absolute;
+  background-color: var(--color-highlight);
   clip-path: polygon(0 100%, 0 20%, 100% 6%, 55% 95%);
-  background-color: #484848;
 }
 
 .body-highlight4 {
-  position: absolute;
-  bottom: 77px;
-  left: 127.6px;
-  z-index: 101;
   width: 18px;
+  bottom: 77px;
   height: 48px;
+  z-index: 101;
+  left: 127.6px;
+  position: absolute;
+  background-color: var(--color-highlight);
   clip-path: polygon(51% 94%, 0 0, 27% 9%, 69% 100%);
-  background-color: #484848;
 }
 
 .body-highlight5 {
-  position: absolute;
-  bottom: 103.8px;
-  left: 131.5px;
-  z-index: 101;
-  width: 18.5px;
   height: 17px;
+  z-index: 101;
+  left: 131.5px;
+  width: 18.5px;
+  bottom: 103.8px;
+  position: absolute;
+  background-color: var(--color-highlight);
   clip-path: polygon(1% 85%, 0 0, 54% 0, 64% 67%);
-  background-color: #484848;
 }
 
 .body-highlight6 {
-  position: absolute;
-  bottom: 91px;
-  left: 91.8px;
-  z-index: 101;
   width: 15px;
+  left: 91.8px;
+  bottom: 91px;
+  z-index: 101;
   height: 20.5px;
+  position: absolute;
+  background-color: var(--color-highlight);
   clip-path: polygon(100% 100%, 15% 36%, 7% 0, 93% 66%);
-  background-color: #484848;
 }
 
 .body-highlight7 {
-  position: absolute;
-  bottom: 86px;
+  width: 14px;
   left: 96.8px;
   z-index: 101;
-  width: 14px;
+  bottom: 86px;
   height: 57px;
+  position: absolute;
+  background-color: var(--color-highlight);
   clip-path: polygon(70% 91%, 26% 8%, 45% 15%, 100% 99%);
-  background-color: #484848;
 }
 
 .body-highlight8 {
-  position: absolute;
-  bottom: 97px;
-  left: 100.5px;
-  z-index: 101;
   width: 7px;
+  bottom: 97px;
+  z-index: 101;
+  left: 100.5px;
   height: 8.5px;
+  position: absolute;
+  background-color: var(--color-highlight);
   clip-path: polygon(0 0, 76% 60%, 82% 100%, 0 31%);
-  background-color: #484848;
 }
 
 .body-highlight9 {
-  position: absolute;
-  bottom: 100px;
-  left: 102.5px;
-  z-index: 101;
   width: 4px;
+  z-index: 101;
+  left: 102.5px;
   height: 6.5px;
+  bottom: 100px;
+  position: absolute;
+  background-color: var(--color-highlight);
   clip-path: polygon(0 0, 65% 38%, 82% 100%, 0 46%);
-  background-color: #484848;
 }
 
 .bat-container {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 100;
-  position: fixed;
   top: 0;
   left: 0;
-  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  position: fixed;
 }
 
 .bat-container svg {
   width: 100%;
   height: 100%;
-}
-
-.shadow {
-  filter: blur(6px);
-  opacity: 0.2;
 }
 
 .bat {
@@ -767,14 +764,17 @@ body {
 
 .left-wing {
   transform-origin: 50% 50%;
-  animation: flap-left-wing 1s ease-in-out normal infinite;
-  animation-iteration-count: 6;
+  animation: flap-left-wing 1s ease-in-out 6 normal;
 }
 
 .right-wing {
   transform-origin: 50% 50%;
-  animation: flap-right-wing 1s ease-in-out normal infinite;
-  animation-iteration-count: 6;
+  animation: flap-right-wing 1s ease-in-out 6 normal;
+}
+
+.bat-shadow {
+  opacity: 0.1;
+  filter: blur(6px);
 }
 
 .batman-title {
