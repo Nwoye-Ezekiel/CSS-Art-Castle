@@ -1,23 +1,14 @@
 :root {
   --color-white: #fff;
-  --color-lip: #744d2e;
-  --color-skin: #f3d1b5;
-  --color-black: #050608;
-  --color-highlight: #484848;
-  --color-dark-shade: #daa980;
-  --color-light-shade: #dfb28b;
-}
-
-@font-face {
-  font-family: batman;
-  src: url("./batman.ttf");
+  --color-dark-red: #911d04;
+  --color-light-red: #ec432c;
+  --color-gray: #717171;
+  --color-black: #040301;
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-weight: 400;
-  font-family: batman;
   box-sizing: border-box;
 }
 
@@ -43,760 +34,176 @@ body {
 }
 
 .main-container {
-  width: 298px;
+  width: 300px;
   height: 279px;
   display: flex;
   position: relative;
   align-items: center;
   flex-direction: column;
+  border: 1px var(--color-light-red) solid;
 }
 
-.head-container {
-  width: 110px;
-  height: 158px;
+.flag {
+  width: 68px;
+  height: 21px;
+  overflow: hidden;
   position: relative;
-  background-color: var(--color-black);
-  clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
+  margin-left: -1.8px;
+  margin-top: 5px;
+  /* overflow: clip;
+  overflow-clip-margin: 0.5px; */
 }
 
-.left-ear-cover-container {
+.flag-part1 {
   top: 0;
   left: 0;
-  width: 20px;
-  height: 24px;
-  position: absolute;
-  background-color: var(--color-white);
-  animation: hide 1s 0.3s ease forwards;
-}
-
-.left-ear-cover-curve {
-  width: 41px;
-  right: -17px;
-  height: 12px;
-  bottom: -8px;
-  position: absolute;
-  border-radius: 50%;
-  transform: rotate(339deg);
-  background-color: var(--color-black);
-}
-
-.right-ear-cover-container {
-  top: 0;
-  right: 0;
-  width: 20px;
-  height: 24px;
-  position: absolute;
-  background-color: var(--color-white);
-  animation: hide 1s 0.3s ease forwards;
-}
-
-.right-ear-cover-curve {
-  left: -17px;
-  width: 41px;
-  height: 12px;
-  bottom: -8px;
-  position: absolute;
-  border-radius: 50%;
-  background-color: var(--color-black);
-  transform: rotate(-339deg);
-}
-
-.ears-container {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 20px;
-  position: absolute;
-  background-color: var(--color-white);
-}
-
-.left-ear {
-  top: 0;
-  left: 9px;
-  width: 11px;
+  width: 33px;
   height: 100%;
   position: absolute;
-  transform: translateY(150px);
-  background-color: var(--color-black);
-  animation: slide-up 1s 0.7s ease forwards;
-  clip-path: polygon(0 0, 20% 0, 100% 100%, 0 100%);
 }
 
-.right-ear {
-  top: 0;
-  right: 9px;
-  width: 11px;
-  height: 100%;
-  position: absolute;
-  transform: translateY(150px);
-  background-color: var(--color-black);
-  animation: slide-up 1s 0.7s ease forwards;
-  clip-path: polygon(80% 0, 100% 0, 100% 100%, 0 100%);
-}
-
-.top-head-curve {
-  top: 14px;
-  left: 50%;
-  width: 120px;
-  height: 48px;
+.flag-part1-circle1 {
+  top: 5px;
+  z-index: 2;
+  width: 115px;
+  height: 18px;
+  right: -1.3px;
   position: absolute;
   border-radius: 50%;
-  transform: translateX(-50%);
-  background-color: var(--color-black);
+  transform: rotate(-10.5deg);
+  background: linear-gradient(
+    90deg,
+    var(--color-light-red) 80%,
+    var(--color-dark-red) 100%
+  );
 }
 
-.midline-area {
-  width: 70px;
-  height: 100%;
-  z-index: 100;
-  position: absolute;
-}
-
-.forehead-highlights-container {
-  top: 28px;
-  left: 50%;
-  width: 70px;
-  height: 40px;
-  overflow: hidden;
-  position: absolute;
-  transform: translateX(-50%);
-}
-
-.top-forehead-highlight-curve1 {
-  top: -7px;
-  left: -12px;
-  width: 22px;
-  z-index: 30;
-  height: 23px;
-  position: absolute;
-  border-radius: 50%;
-  background-color: var(--color-black);
-}
-
-.top-forehead-highlight-container {
-  top: 0;
-  left: 0;
-  width: 70px;
-  height: 40px;
-  overflow: hidden;
-  position: absolute;
-}
-
-.top-forehead-highlight-curve2 {
-  top: 0;
-  left: -10px;
-  width: 92px;
-  height: 44px;
-  position: absolute;
-  border-radius: 50%;
-  background-color: var(--color-highlight);
-}
-
-.right-top-forehead-highlight-curve-container {
-  top: 4px;
-  right: -3px;
-  width: 14px;
-  height: 24px;
-  position: absolute;
-}
-
-.right-top-forehead-highlight-curve1 {
-  top: 1.1px;
-  left: 0.7px;
-  width: 10px;
-  z-index: 10;
-  height: 20px;
-  position: absolute;
-  border-radius: 50%;
-  background-color: var(--color-highlight);
-}
-
-.right-top-forehead-highlight-curve2 {
-  top: 1px;
-  left: 4px;
-  z-index: 5;
-  width: 10px;
-  height: 11px;
-  position: absolute;
-  border-radius: 50%;
-  background-color: var(--color-black);
-}
-
-.forehead-bottom-highlight-container {
-  top: 6px;
-  left: 6px;
-  width: 70px;
-  z-index: 20;
-  height: 40px;
-  overflow: hidden;
-  position: absolute;
-}
-
-.forehead-bottom-highlight-curve1 {
-  top: 0;
-  left: -15px;
-  width: 91px;
-  height: 43px;
-  position: absolute;
-  border-radius: 50%;
-  background-color: var(--color-black);
-}
-
-.forehead-bottom-highlight-curve2 {
-  top: -10px;
-  left: -13px;
-  width: 22px;
-  height: 23px;
-  position: absolute;
-  border-radius: 50%;
-  background-color: var(--color-highlight);
-}
-
-.right-forehead-bottom-highlight-curve-container {
-  top: 4px;
-  right: -3px;
-  width: 14px;
-  height: 24px;
-  position: absolute;
-}
-
-.right-forehead-bottom-highlight-curve1 {
-  top: 3px;
-  left: 0.7px;
-  width: 10px;
-  z-index: 20;
-  height: 20px;
-  position: absolute;
-  border-radius: 50%;
-  background-color: var(--color-black);
-}
-
-.right-forehead-bottom-highlight-curve2 {
-  top: 3px;
-  left: 4px;
-  width: 10px;
-  z-index: 15;
-  height: 11px;
-  position: absolute;
-  border-radius: 50%;
-  background-color: var(--color-highlight);
-}
-
-.eyes-wrapper {
-  top: 72px;
-  left: 50%;
-  width: 70px;
-  display: flex;
-  position: absolute;
-  transform: translateX(-50%);
-  justify-content: space-between;
-}
-
-.eyes-container {
-  visibility: hidden;
-  filter: drop-shadow(0 0 5px var(--color-white));
-  animation: show 1s 3s ease forwards, fade-in 1s 3s ease;
-}
-
-.left-eyes {
-  width: 23px;
-  height: 8px;
-  background-color: var(--color-white);
-  clip-path: polygon(0 0, 0 0, 100% 100%, 20% 80%);
-}
-
-.right-eyes {
-  width: 23px;
-  height: 8px;
-  background-color: var(--color-white);
-  clip-path: polygon(100% 0, 100% 0, 80% 80%, 0 100%);
-}
-
-.left-cheek-highlight {
-  left: -3px;
-  top: 81.2px;
-  z-index: 50;
-  width: 6.5px;
-  height: 12px;
-  position: absolute;
-  background-color: var(--color-highlight);
-  clip-path: polygon(10% 0, 100% 25%, 92% 97%, 0 82%);
-}
-
-.nose-highlights-container {
-  right: 50%;
-  top: 81.5px;
-  width: 19px;
-  z-index: 50;
-  position: absolute;
-}
-
-.nose-highlight1 {
-  top: 0;
-  left: 1px;
-  width: 10.5px;
-  height: 18.5px;
-  position: absolute;
-  background-color: var(--color-highlight);
-  clip-path: polygon(100% 4%, 0 70%, 93% 100%);
-}
-
-.nose-highlight2 {
-  top: 0;
-  right: 0;
-  width: 8.5px;
-  height: 22px;
-  position: absolute;
-  background-color: var(--color-highlight);
-  clip-path: polygon(0 0, 100% 12%, 100% 95%, 0 83.5%);
-}
-
-.nose-highlight3 {
-  right: 0;
-  top: -0.5px;
-  width: 9.5px;
-  height: 10px;
-  position: absolute;
-  background-color: var(--color-highlight);
-  clip-path: polygon(0 0, 100% 100%, 100% 30%);
-}
-
-.nose-highlight4 {
-  top: -6px;
-  width: 9px;
-  right: -10px;
-  height: 9.5px;
-  position: absolute;
-  background-color: var(--color-highlight);
-  clip-path: polygon(25% 9%, 0 81%, 81% 50%);
-}
-
-.uncovered-area-wrapper {
-  top: 90px;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
-}
-
-.nose-mask {
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  height: 13px;
-  position: absolute;
-  background-color: var(--color-black);
-  clip-path: polygon(0 0, 100% 0, 50% 100%, 50% 100%);
-}
-
-.left-cheek-nose-mask-cut {
-  top: 0;
-  left: 1px;
-  width: 4px;
-  height: 7px;
-  z-index: 10;
-  position: absolute;
-  background-color: var(--color-skin);
-  clip-path: polygon(0 0, 100% 22%, 100% 100%);
-}
-
-.right-cheek-nose-mask-cut {
-  top: 0;
-  right: 1px;
-  width: 4px;
-  height: 7px;
-  z-index: 10;
-  position: absolute;
-  clip-path: polygon(100% 0, 0 22%, 0 100%);
-  background-color: var(--color-dark-shade);
-}
-
-.uncovered-area-container {
-  width: 87px;
-  height: 67px;
-  position: relative;
-  background-color: var(--color-skin);
-  clip-path: polygon(5% 0, 95% 0, 100% 100%, 0 100%);
-}
-
-.nose-mask-shade {
-  left: 0;
-  top: -1px;
-  z-index: 5;
-  width: 100%;
-  height: 20px;
-  position: absolute;
-  background-color: var(--color-light-shade);
-  clip-path: polygon(0 0, 100% 0, 50% 100%, 50% 100%);
-}
-
-.top-lip-shade {
-  top: 0;
-  right: 0;
-  width: 50%;
-  z-index: 5;
-  height: 35px;
-  position: absolute;
-  background-color: var(--color-light-shade);
-}
-
-.top-lip {
-  top: 25px;
-  left: 50%;
-  width: 37px;
-  z-index: 10;
-  height: 20px;
-  position: absolute;
-  transform: translateX(-50%);
-  border-top: 1px var(--color-lip) solid;
-  animation: droop-lip 0.5s 1.2s ease forwards;
-}
-
-.bottom-lip {
-  top: 26px;
-  left: 50%;
-  z-index: 9;
-  height: 5px;
-  width: 34.5px;
-  position: absolute;
-  transform: translateX(-50%);
-  background-color: var(--color-skin);
-  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
-}
-
-.bottom-lip-shade {
-  right: 0;
-  top: 31px;
-  width: 65%;
-  z-index: 5;
-  height: 6px;
-  position: absolute;
-  background-color: var(--color-light-shade);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
-}
-
-.right-cheek-shade {
-  top: 0;
-  right: 1px;
-  width: 15px;
-  z-index: 10;
-  height: 45px;
-  position: absolute;
-  background-color: var(--color-dark-shade);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 26% 100%);
-}
-
-.top-chin-shade {
-  bottom: 0;
-  z-index: 4;
+.flag-part1-square1 {
+  z-index: 2;
   width: 25px;
-  right: 9.5px;
-  height: 50px;
+  bottom: 4px;
+  height: 13px;
+  right: -0.5px;
   position: absolute;
-  background-color: var(--color-light-shade);
-  clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
+  background: linear-gradient(
+    90deg,
+    var(--color-light-red) 5%,
+    var(--color-dark-red) 100%
+  );
 }
 
-.right-jaw-shade {
-  bottom: 2px;
-  width: 104px;
-  z-index: 220;
-  right: -29.5px;
-  height: 31.5px;
-  position: absolute;
-  transform: rotate(340deg);
-  background-color: var(--color-dark-shade);
-  clip-path: polygon(68% 0, 97% 22%, 40% 97%);
-}
-
-.left-jaw-cover {
-  left: 0;
-  bottom: 0;
-  width: 27px;
-  height: 25px;
-  position: absolute;
-  background-color: var(--color-black);
-  clip-path: polygon(0 0, 0 0, 100% 100%, 0% 100%);
-}
-
-.bottom-chin-shade {
-  bottom: 0;
-  z-index: 4;
-  right: 15px;
-  width: 45px;
-  height: 31.5px;
-  position: absolute;
-  background-color: var(--color-light-shade);
-  clip-path: polygon(100% 59%, 0% 100%, 100% 100%);
-}
-
-.right-jaw-cover {
-  right: 0;
-  bottom: 0;
-  width: 27px;
-  z-index: 20;
-  height: 25px;
-  position: absolute;
-  background-color: var(--color-black);
-  clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-.shoulder {
-  width: 100%;
-  z-index: 10;
-  height: 47px;
-  position: relative;
-  margin-top: -0.5px;
-  background-color: var(--color-black);
-  clip-path: polygon(31.55% 0, 68.45% 0, 100% 100%, 0 100%);
-}
-
-.body {
-  width: 100%;
-  height: 93px;
+.flag-part1-circle2 {
+  z-index: 3;
+  width: 115px;
+  height: 12px;
+  bottom: -10px;
+  right: -0.8px;
   overflow: hidden;
-  position: relative;
-  margin-top: -0.1px;
-  background-color: var(--color-black);
-}
-
-.body-curve1 {
-  top: 0px;
-  left: -50px;
-  z-index: 60;
-  width: 100px;
-  height: 70px;
   position: absolute;
   border-radius: 50%;
+  transform: rotate(-8.5deg);
   background-color: var(--color-white);
+  /* overflow: clip;
+  overflow-clip-margin: 0.1px; */
 }
 
-.body-curve1::after {
-  top: -1px;
-  left: -1px;
-  content: "";
-  width: 100px;
-  height: 70px;
-  position: absolute;
-  border-radius: 50%;
-  border: var(--color-black) solid 1px;
-}
-
-.body-curve2 {
-  top: 38px;
-  left: 7.5px;
-  z-index: 70;
-  width: 142px;
-  height: 114px;
-  position: absolute;
-  border-radius: 50%;
-  background-color: var(--color-white);
-}
-
-.body-curve3 {
-  top: 38px;
-  z-index: 70;
-  right: 7.5px;
-  width: 142px;
-  height: 114px;
-  position: absolute;
-  border-radius: 50%;
-  background-color: var(--color-white);
-}
-
-.body-curve4 {
-  top: 0px;
-  z-index: 60;
-  right: -50px;
-  width: 100px;
-  height: 70px;
-  position: absolute;
-  border-radius: 50%;
-  background-color: var(--color-white);
-}
-
-.body-curve4::after {
-  top: -1px;
-  right: -1px;
-  content: "";
-  width: 100px;
-  height: 70px;
-  position: absolute;
-  border-radius: 50%;
-  border: var(--color-black) solid 1px;
-}
-
-.left-body-overlay {
-  left: 0;
-  bottom: 0;
-  z-index: 70;
-  width: 109px;
-  height: 44px;
-  position: absolute;
-  background: var(--color-white);
-}
-
-.right-body-overlay {
+.flag-part1-circle2-square1 {
   right: 0;
-  bottom: 0;
-  z-index: 70;
-  width: 109px;
-  height: 44px;
+  z-index: 2;
+  width: 9px;
+  bottom: 2px;
+  height: 7px;
   position: absolute;
-  background: var(--color-white);
+  transform: rotate(8.5deg);
+  box-shadow: inset 0 0 50px var(--color-dark-red);
 }
 
-.body-highlight1 {
-  right: 20px;
-  z-index: 50;
-  bottom: 60px;
-  height: 28px;
-  width: 88.5px;
+.flag-part2 {
+  top: 0;
+  right: 0;
+  width: 44px;
+  height: 100%;
   position: absolute;
-  background-color: var(--color-highlight);
-  clip-path: polygon(0 0, 100% 22%, 68% 100%, 3% 23%);
 }
 
-.body-highlight2 {
-  left: 20px;
+.flag-part2-circle1 {
+  top: -10px;
+  z-index: 1;
+  width: 93px;
+  right: -20px;
+  height: 18px;
+  position: absolute;
+  border-radius: 50%;
+  transform: rotate(12deg);
+  background-color: white;
+}
+
+.flag-part2-circle2 {
+  top: 1.5px;
+  z-index: 0;
+  right: -3px;
   width: 75px;
-  z-index: 50;
-  bottom: 80px;
-  height: 40.5px;
+  height: 19px;
+  border-radius: 50%;
   position: absolute;
-  background-color: var(--color-highlight);
-  clip-path: polygon(0 91%, 96% 0, 99% 40%, 9% 100%);
-}
-.body-highlight3 {
-  z-index: 50;
-  right: 135px;
-  width: 8.5px;
-  bottom: 78px;
-  height: 33px;
-  position: absolute;
-  background-color: var(--color-highlight);
-  clip-path: polygon(0 100%, 0 20%, 100% 6%, 55% 95%);
+  transform: rotate(-5deg);
+  background: linear-gradient(
+    90deg,
+    var(--color-light-red) 45%,
+    var(--color-dark-red) 100%
+  );
 }
 
-.body-highlight4 {
-  width: 18px;
-  bottom: 77px;
-  height: 48px;
-  z-index: 101;
-  left: 127.6px;
-  position: absolute;
-  background-color: var(--color-highlight);
-  clip-path: polygon(51% 94%, 0 0, 27% 9%, 69% 100%);
+/* fleg stand */
+.flag-stand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flag-stand {
+  display: flex;
+  flex-direction: column;
 }
 
-.body-highlight5 {
-  height: 17px;
-  z-index: 101;
-  left: 131.5px;
-  width: 18.5px;
-  bottom: 104px;
-  position: absolute;
-  background-color: var(--color-highlight);
-  clip-path: polygon(1% 85%, 0 0, 54% 0, 64% 67%);
+.head {
+  width: 5px;
+  height: 5px;
+  background-color: var(--color-gray);
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  box-shadow: inset 0 -0.8px 0.5px rgba(0, 0, 0, 0.3);
 }
 
-.body-highlight6 {
-  width: 15px;
-  left: 91.8px;
-  bottom: 91px;
-  z-index: 101;
-  height: 20.5px;
-  position: absolute;
-  background-color: var(--color-highlight);
-  clip-path: polygon(100% 100%, 15% 36%, 7% 0, 93% 66%);
+.rod {
+  width: 1px;
+  height: 25px;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  background-color: var(--color-gray);
+  position: relative;
+  z-index: 0;
+  box-shadow: inset 0 2px 0.5px rgba(0, 0, 0, 0.3),
+    inset 0 -3px 1px rgba(0, 0, 0, 0.3);
 }
 
-.body-highlight7 {
-  width: 14px;
-  left: 96.8px;
-  z-index: 101;
-  bottom: 86px;
-  height: 57px;
-  position: absolute;
-  background-color: var(--color-highlight);
-  clip-path: polygon(70% 91%, 26% 8%, 45% 15%, 100% 99%);
+.flag-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.body-highlight8 {
-  width: 7px;
-  bottom: 97px;
-  z-index: 101;
-  left: 100.5px;
-  height: 8.5px;
-  position: absolute;
-  background-color: var(--color-highlight);
-  clip-path: polygon(0 0, 76% 60%, 82% 100%, 0 31%);
+.spire {
+  margin-left: 0.8px;
 }
 
-.body-highlight9 {
-  width: 4px;
-  z-index: 101;
-  left: 102.5px;
-  height: 6.5px;
-  bottom: 100px;
-  position: absolute;
-  background-color: var(--color-highlight);
-  clip-path: polygon(0 0, 65% 38%, 82% 100%, 0 46%);
-}
-
-.batman-title {
-  margin-top: 10px;
-  visibility: hidden;
-  animation: show 1s 3s ease forwards, fade-in 1s 3s ease;
-}
-
-@keyframes hide {
-  0% {
-    visibility: visible;
-  }
-  100% {
-    visibility: hidden;
-  }
-}
-
-@keyframes slide-up {
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes show {
-  0% {
-    visibility: hidden;
-  }
-  100% {
-    visibility: visible;
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes droop-lip {
-  100% {
-    border-radius: 4px;
-  }
-}
-
-@media (min-width: 425px) {
-  .wrapper {
-    transform: scale(1.2);
-  }
-}
-
-@media (min-width: 768px) {
-  .wrapper {
-    transform: scale(2);
-  }
+.spire .rod {
+  width: 3.5px;
+  height: 3.5px;
+  background-color: var(--color-light-red);
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  box-shadow: inset 0 -0.8px 0.5px rgba(0, 0, 0, 0.3);
 }
