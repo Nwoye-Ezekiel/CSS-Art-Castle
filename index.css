@@ -4,7 +4,7 @@
   --color-dark-red: #911d04;
   --color-light-red: #cf371f;
   --color-dark-gray: #717171;
-  --color-brown: #af6d37;
+  --color-brown: #ae6e36;
   --color-green: rgb(33, 142, 61);
   --color-yellow: #b6cb49;
   --color-dark-green: #38642f;
@@ -578,7 +578,7 @@ body {
   height: 100%;
   background-color: var(--color-brown);
   border-radius: 0.7px;
-  box-shadow: inset 0.8px 0px 0.5px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0.5px 0px 0.5px rgba(0, 0, 0, 0.3);
 }
 
 .irons div:first-child,
