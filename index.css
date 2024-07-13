@@ -59,7 +59,9 @@ body {
 
 .flag {
   width: 68px;
-  height: 21px;
+  height: 22px;
+  /* border: 0.1px red solid; */
+  /* height: 21px; */
   clip-path: inset(0 0 0 0);
   transform: translateZ(0);
   position: relative;
@@ -67,11 +69,22 @@ body {
   margin-top: 5px;
 }
 
+.flag::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 24.25px;
+  height: 2px;
+  /* background-color: var(--color-white); */
+}
+
 .flag-part1 {
   top: 0;
   left: 0;
   width: 33px;
   height: 100%;
+  /* height: 21px; */
   position: absolute;
   overflow: hidden;
 }
@@ -95,7 +108,7 @@ body {
 .flag-part1-square1 {
   z-index: 2;
   width: 25px;
-  bottom: 4px;
+  top: 3px;
   rotate: 0.5deg;
   height: 14px;
   right: -0.2px;
@@ -113,14 +126,24 @@ body {
   z-index: 3;
   width: 115px;
   height: 12px;
-  bottom: -10px;
-  right: -0.8px;
+  top: 19px;
+  right: -0.6px;
   overflow: hidden;
   position: absolute;
   border-radius: 50%;
-  /* clip-path: inset(0 0 0 0); */
   background-color: var(--color-white);
   transform: rotate(-8.5deg) translateZ(0);
+}
+
+.flag-part1-circle2-container::after {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  bottom: -2px;
+  right: 8.8px;
+  height: 3px;
+  width: 5px;
+  background-color: var(--color-white);
 }
 
 .flag-part1-circle2-square1 {
@@ -131,7 +154,6 @@ body {
   height: 7px;
   position: absolute;
   transform: rotate(8.5deg);
-  border-bottom-left-radius: 0.5px;
   background-color: var(--color-dark-red);
   box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.3);
 }
@@ -142,10 +164,11 @@ body {
   width: 44px;
   height: 100%;
   position: absolute;
+  /* border: 0.1px red solid; */
 }
 
 .flag-part2-circle1 {
-  top: -10px;
+  top: -9.5px;
   z-index: 1;
   width: 93px;
   right: -20px;
@@ -157,7 +180,7 @@ body {
 }
 
 .flag-part2-circle2 {
-  top: 1.5px;
+  top: 1.65px;
   z-index: 0;
   right: -3px;
   width: 75px;
@@ -170,6 +193,7 @@ body {
     var(--color-light-red) 45%,
     var(--color-dark-red) 100%
   );
+  /* border: 0.1px red solid; */
 }
 
 /* flag stand */
@@ -362,18 +386,18 @@ body {
   clip-path: polygon(
     0 100%,
     0 0,
-    14.285% 0,
-    14.285% 100%,
-    28.57% 100%,
-    28.57% 0,
-    42.855% 0,
-    42.855% 100%,
-    57.14% 100%,
-    57.14% 0,
-    71.425% 0,
-    71.425% 100%,
-    85.71% 100%,
-    85.71% 0,
+    15% 0,
+    15% 100%,
+    28.33% 100%,
+    28.33% 0,
+    43.33% 0,
+    43.33% 100%,
+    56.66% 100%,
+    56.66% 0,
+    71.66% 0,
+    71.66% 100%,
+    84.99% 100%,
+    84.99% 0,
     100% 0,
     100% 100%
   );
