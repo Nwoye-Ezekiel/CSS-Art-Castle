@@ -44,8 +44,8 @@ body {
   position: relative;
   align-items: center;
   justify-content: center;
-  /* background: linear-gradient(to bottom, #87CEEB 0%, #f7f7f7 40%); */
-  /* background: linear-gradient(to bottom, #87CEEB 20%, #f7f7f7 80%, #4caf50 100%); */
+  /* background: linear-gradient(to bottom, #87CEEB 20%, #4caf4f0c 100%); */
+  /* background: linear-gradient(to bottom, #87ceeb 20%, #4caf4f00 100%); */
 }
 
 .wrapper {
@@ -625,65 +625,6 @@ body {
   margin-top: -0.5px;
 }
 
-/* .part8 {
-  position: relative;
-  width: 100%;
-  height: 90px;
-  background-color: var(--color-gray-shade2);
-  border-top: 1px var(--color-highlight) solid;
-  background: rgb(204, 204, 204);
-  background: radial-gradient(
-    circle at center,
-    var(--color-gray-shade1) -50%,
-    var(--color-gray-shade2) 250%
-  );
-}
-
-.part9 {
-  display: flex;
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  top: -13.5px;
-  justify-content: space-between;
-  width: 100px;
-  height: 14px;
-  clip-path: polygon(
-    0 100%,
-    0 0,
-    15% 0,
-    15% 100%,
-    28.33% 100%,
-    28.33% 0,
-    43.33% 0,
-    43.33% 100%,
-    56.66% 100%,
-    56.66% 0,
-    71.66% 0,
-    71.66% 100%,
-    84.99% 100%,
-    84.99% 0,
-    100% 0,
-    100% 100%
-  );
-  background: radial-gradient(
-    circle at center,
-    var(--color-gray-shade1) -50%,
-    var(--color-gray-shade2) 250%
-  );
-  border-top: 1px var(--color-highlight) solid;
-} */
-
-.back-tower {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 90px;
-  z-index: -1;
-}
-
 .door-container {
   display: flex;
   position: relative;
@@ -893,14 +834,14 @@ body {
 }
 
 .stairs-part3 {
-  width: 87%;
+  width: 88%;
   height: 4px;
   background-color: var(--color-highlight);
   clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
 }
 
 .stairs-part4 {
-  width: 87%;
+  width: 88%;
   height: 6px;
   background: linear-gradient(
     90deg,
@@ -1011,10 +952,29 @@ body {
   height: 50px;
   border-radius: 50%;
   background-color: #4caf50;
+  overflow: hidden;
+}
+
+.land::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: #d70303;
+  background-color: #4caf50;
+  box-shadow: 0px 0 50px rgba(0, 0, 0, 0.5), 150px 0 50px rgba(0, 0, 0, 0.2),
+    -150px 0 50px rgba(0, 0, 0, 0.2);
+  filter: blur(10px);
 }
 
 .water-spill {
   position: absolute;
+  z-index: 20;
   bottom: 10px;
   left: 60%;
   width: 30px;
@@ -1048,4 +1008,93 @@ body {
   border-radius: 50%;
   background-color: rgb(192, 233, 249);
   box-shadow: inset 0 -0.01px 2px rgba(135, 206, 235, 1);
+}
+
+.tree {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: -90px;
+}
+
+.tree1 {
+  left: -50px;
+}
+
+.tree2 {
+  right: -50px;
+}
+
+.tree-head {
+  position: relative;
+  z-index: 2;
+  width: 40px;
+  height: 60px;
+  border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
+  background-color: #4caf50;
+  overflow: hidden;
+}
+
+.tree-head::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -15%;
+  left: -20%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
+  background-color: #4caf50;
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
+  filter: blur(4px);
+}
+
+.tree-body {
+  position: relative;
+  z-index: 1;
+  margin-top: -1px;
+  width: 5px;
+  height: 40px;
+  background-color: var(--color-brown);
+  border-radius: 50% 50% 50% 50% / 2% 2% 98% 98%;
+}
+
+.tree-body::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-brown);
+  border-radius: 50% 50% 50% 50% / 98% 98% 2% 2%;
+  box-shadow: inset 0 -0.1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.tree-body::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background-color: var(--color-brown);
+  box-shadow: inset 0 4px 1px rgba(0, 0, 0, 0.3);
+}
+
+.shadow {
+  position: absolute;
+  z-index: -1;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
 }
