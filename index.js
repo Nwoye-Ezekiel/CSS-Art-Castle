@@ -30,11 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
         randoHundo +
         "s; animation-duration: 0.5" +
         randoHundo +
-        's;"></div><div class="splat" style="animation-delay: 0.' +
-        randoHundo +
         "s; animation-duration: 0.5" +
         randoHundo +
         's;"></div></div>';
+
       backDrops +=
         '<div class="drop" style="right: ' +
         increment +
@@ -48,8 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
         randoHundo +
         "s; animation-duration: 0.5" +
         randoHundo +
-        's;"></div><div class="splat" style="animation-delay: 0.' +
-        randoHundo +
         "s; animation-duration: 0.5" +
         randoHundo +
         's;"></div></div>';
@@ -61,5 +58,5 @@ document.addEventListener("DOMContentLoaded", function () {
     backRow.innerHTML = backDrops;
   };
 
-  // makeItRain();
+  makeItRain();
 });
