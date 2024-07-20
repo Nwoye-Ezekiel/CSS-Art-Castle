@@ -12,6 +12,23 @@
     <title>Castle</title>
   </head>
   <body>
+    <div class="music-modal-container" id="musicModal">
+      <div class="music-modal">
+        <h3>Enable Music</h3>
+        <div>
+          <button id="noButton">
+            <span>NO</span>
+          </button>
+          <button id="yesButton">
+            <span>YES</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <audio id="myAudio" loop>
+      <source src="music.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
     <div class="rain front-row"></div>
     <div class="rain back-row"></div>
     <div class="wrapper">
@@ -338,8 +355,8 @@
     <script src="index.js"></script>
     <script>
       function updateScale() {
-        const baseWidth = 400;
-        const baseHeight = 800;
+        const baseWidth = 350;
+        const baseHeight = 700;
         const viewportWidth = window.innerWidth;
         const viewportHeight = window.innerHeight;
 
@@ -350,11 +367,25 @@
 
         const wrapper = document.querySelector(".wrapper");
         wrapper.style.transform = `scale(${scaleFactor})`;
-        wrapper.style.transformOrigin = "center";
+        // wrapper.style.transformOrigin = "bottom";
       }
 
       window.addEventListener("resize", updateScale);
       window.addEventListener("load", updateScale);
+    </script>
+    <script>
+      document
+        .getElementById("yesButton")
+        .addEventListener("click", function () {
+          document.getElementById("myAudio").play();
+          document.getElementById("musicModal").style.display = "none";
+        });
+
+      document
+        .getElementById("noButton")
+        .addEventListener("click", function () {
+          document.getElementById("musicModal").style.display = "none";
+        });
     </script>
   </body>
 </html>
