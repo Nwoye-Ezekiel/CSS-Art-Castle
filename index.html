@@ -3,12 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
-
     <title>Castle</title>
   </head>
   <body>
@@ -25,9 +21,11 @@
         </div>
       </div>
     </div>
-    <audio id="myAudio" loop>
-      <source src="music.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
+    <audio id="myAudio" preload="auto" loop>
+      <source src="audio/soundtrack.opus" type="audio/opus" />
+      <source src="audio/soundtrack.ogg" type="audio/ogg" />
+      <source src="audio/soundtrack.aac" type="audio/aac" />
+      <source src="audio/soundtrack.mp3" type="audio/mpeg" />
     </audio>
     <div class="rain front-row"></div>
     <div class="rain back-row"></div>
@@ -71,17 +69,6 @@
                     <div class="brick"></div>
                     <div class="brick"></div>
                     <div class="brick"></div>
-                    <!-- <div class="brick"></div> -->
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                  </div>
-                  <div class="brick-row">
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <!-- <div class="brick"></div> -->
                     <div class="brick"></div>
                     <div class="brick"></div>
                     <div class="brick"></div>
@@ -93,7 +80,6 @@
                     <div class="brick"></div>
                     <div class="brick"></div>
                     <div class="brick"></div>
-                    <!-- <div class="brick"></div> -->
                     <div class="brick"></div>
                     <div class="brick"></div>
                   </div>
@@ -104,17 +90,6 @@
                     <div class="brick"></div>
                     <div class="brick"></div>
                     <div class="brick"></div>
-                    <!-- <div class="brick"></div> -->
-                    <div class="brick"></div>
-                  </div>
-                  <div class="brick-row">
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <!-- <div class="brick"></div> -->
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
                     <div class="brick"></div>
                   </div>
                   <div class="brick-row">
@@ -122,7 +97,6 @@
                     <div class="brick"></div>
                     <div class="brick"></div>
                     <div class="brick"></div>
-                    <!-- <div class="brick"></div> -->
                     <div class="brick"></div>
                     <div class="brick"></div>
                     <div class="brick"></div>
@@ -132,7 +106,24 @@
                     <div class="brick"></div>
                     <div class="brick"></div>
                     <div class="brick"></div>
-                    <!-- <div class="brick"></div> -->
+                    <div class="brick"></div>
+                    <div class="brick"></div>
+                    <div class="brick"></div>
+                  </div>
+                  <div class="brick-row">
+                    <div class="brick"></div>
+                    <div class="brick"></div>
+                    <div class="brick"></div>
+                    <div class="brick"></div>
+                    <div class="brick"></div>
+                    <div class="brick"></div>
+                    <div class="brick"></div>
+                  </div>
+                  <div class="brick-row">
+                    <div class="brick"></div>
+                    <div class="brick"></div>
+                    <div class="brick"></div>
+                    <div class="brick"></div>
                     <div class="brick"></div>
                     <div class="brick"></div>
                     <div class="brick"></div>
@@ -353,39 +344,5 @@
       </div>
     </div>
     <script src="index.js"></script>
-    <script>
-      function updateScale() {
-        const baseWidth = 350;
-        const baseHeight = 700;
-        const viewportWidth = window.innerWidth;
-        const viewportHeight = window.innerHeight;
-
-        const scaleWidth = viewportWidth / baseWidth;
-        const scaleHeight = viewportHeight / baseHeight;
-
-        const scaleFactor = Math.min(scaleWidth, scaleHeight);
-
-        const wrapper = document.querySelector(".wrapper");
-        wrapper.style.transform = `scale(${scaleFactor})`;
-        // wrapper.style.transformOrigin = "bottom";
-      }
-
-      window.addEventListener("resize", updateScale);
-      window.addEventListener("load", updateScale);
-    </script>
-    <script>
-      document
-        .getElementById("yesButton")
-        .addEventListener("click", function () {
-          document.getElementById("myAudio").play();
-          document.getElementById("musicModal").style.display = "none";
-        });
-
-      document
-        .getElementById("noButton")
-        .addEventListener("click", function () {
-          document.getElementById("musicModal").style.display = "none";
-        });
-    </script>
   </body>
 </html>

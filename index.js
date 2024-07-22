@@ -1,61 +1,56 @@
-document.addEventListener("DOMContentLoaded", function () {
-  var makeItRain = function () {
-    // Clear out everything
-    var rainElements = document.querySelectorAll(".rain");
+const handleButtonClick = (playAudio) => {
+  if (playAudio) document.getElementById("myAudio").play();
+  document.getElementById("musicModal").classList.add("fade-out");
+};
+
+document.getElementById("yesButton").addEventListener("click", () => {
+  handleButtonClick(true);
+});
+
+document.getElementById("noButton").addEventListener("click", () => {
+  handleButtonClick(false);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const makeItRain = () => {
+    let rainElements = document.querySelectorAll(".rain");
+
     rainElements.forEach(function (rain) {
       rain.innerHTML = "";
     });
 
-    var increment = 0;
-    var drops = "";
-    var backDrops = "";
+    let increment = 0;
+    let drops = "";
+    let backDrops = "";
 
-    while (increment < 100) {
-      // Random numbers for various randomizations
-      var randoHundo = Math.floor(Math.random() * (98 - 1 + 1) + 1);
-      var randoFiver = Math.floor(Math.random() * (5 - 2 + 1) + 2);
+    for (let i = 0; i < 100; i++) {
+      let randoHundo = Math.floor(Math.random() * 98) + 1;
+      let randoFiver = Math.floor(Math.random() * 4) + 2;
       increment += randoFiver;
 
-      // Add in a new raindrop with various randomizations to certain CSS properties
-      drops +=
-        '<div class="drop" style="left: ' +
-        increment +
-        "%; bottom: " +
-        (randoFiver + randoFiver - 1 + 100) +
-        "%; animation-delay: 0." +
-        randoHundo +
-        "s; animation-duration: 0.5" +
-        randoHundo +
-        's;"><div class="stem" style="animation-delay: 0.' +
-        randoHundo +
-        "s; animation-duration: 0.5" +
-        randoHundo +
-        "s; animation-duration: 0.5" +
-        randoHundo +
-        's;"></div></div>';
+      let dropStyle = `
+        left: ${increment}%; 
+        bottom: ${randoFiver * 2 + 99}%; 
+        animation-delay: 0.${randoHundo}s; 
+        animation-duration: 0.5${randoHundo}s;`;
 
-      backDrops +=
-        '<div class="drop" style="right: ' +
-        increment +
-        "%; bottom: " +
-        (randoFiver + randoFiver - 1 + 100) +
-        "%; animation-delay: 0." +
-        randoHundo +
-        "s; animation-duration: 0.5" +
-        randoHundo +
-        's;"><div class="stem" style="animation-delay: 0.' +
-        randoHundo +
-        "s; animation-duration: 0.5" +
-        randoHundo +
-        "s; animation-duration: 0.5" +
-        randoHundo +
-        's;"></div></div>';
+      let stemStyle = `
+        animation-delay: 0.${randoHundo}s; 
+        animation-duration: 0.5${randoHundo}s;`;
+
+      drops += `
+        <div class="drop" style="${dropStyle}">
+          <div class="stem" style="${stemStyle}"></div>
+        </div>`;
+
+      backDrops += `
+        <div class="drop" style="${dropStyle.replace("left", "right")}">
+          <div class="stem" style="${stemStyle}"></div>
+        </div>`;
     }
 
-    var frontRow = document.querySelector(".rain.front-row");
-    var backRow = document.querySelector(".rain.back-row");
-    frontRow.innerHTML = drops;
-    backRow.innerHTML = backDrops;
+    document.querySelector(".rain.front-row").innerHTML = drops;
+    document.querySelector(".rain.back-row").innerHTML = backDrops;
   };
 
   makeItRain();
