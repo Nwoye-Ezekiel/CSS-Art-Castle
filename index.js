@@ -15,7 +15,7 @@ document.getElementById("yes-button").addEventListener("click", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const makeItRain = () => {
+  const rain = () => {
     let increment = 0, rain = "";
 
     for (let i = 0; i < 100; i++) {
@@ -43,5 +43,5 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".rain-wrapper").innerHTML = rain;
   };
 
-  makeItRain();
+  rain();
 });
