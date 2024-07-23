@@ -42,6 +42,7 @@
   --color-translucent-black-5: #00000080;
   --color-translucent-black-07: #00000012;
   --color-translucent-black-13: #00000021;
+  --color-translucent-black-15: #00000026;
 }
 
 * {
@@ -201,7 +202,7 @@ audio {
   background-color: var(--color-plain-white);
   border-radius: 50%;
   filter: blur(1px);
-  box-shadow: 0px 0px 40px 10px white;
+  box-shadow: 0px 0px 40px 15px white;
 }
 
 .cloud {
@@ -696,7 +697,7 @@ audio {
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  box-shadow: 20px 20px 50px var(--color-translucent-black-1);
+  box-shadow: 20px 20px 50px var(--color-translucent-black-15);
   filter: blur(1px);
 }
 
@@ -857,7 +858,7 @@ audio {
   width: 110px;
   height: 150px;
   border-radius: 50%;
-  box-shadow: 20px 20px 50px var(--color-translucent-black-1);
+  box-shadow: 20px 20px 50px var(--color-translucent-black-15);
   filter: blur(1px);
 }
 
@@ -991,6 +992,19 @@ audio {
     inset 0 4px 2px var(--color-translucent-black-1);
 }
 
+.door-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border: 3px var(--color-translucent-gray-25) solid;
+}
+
 .door {
   position: relative;
   display: flex;
@@ -999,6 +1013,15 @@ audio {
   border: 0.7px var(--color-black-shade-1) solid;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 9.2px;
+  overflow: hidden;
+  box-shadow: inset -1px 0 2px var(--color-translucent-black-1),
+    inset 1px 0 2px var(--color-translucent-black-1),
+    inset 0 4px 1px var(--color-translucent-black-3);
   background: repeating-linear-gradient(
     90deg,
     var(--color-brown-shade-2),
@@ -1008,16 +1031,6 @@ audio {
     var(--color-brown-shade-3) 11.9%,
     var(--color-brown-shade-3) 12.7%
   );
-  overflow: hidden;
-  box-shadow: inset -1px 0 2px var(--color-translucent-black-1),
-    inset 1px 0 2px var(--color-translucent-black-1),
-    inset 0 4px 1px var(--color-translucent-black-3);
-
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 16px;
-  padding-bottom: 9.2px;
 }
 
 .door-vertical-bar {
