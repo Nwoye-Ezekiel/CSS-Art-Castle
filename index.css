@@ -1,27 +1,52 @@
 :root {
-  --color-white: #fff;
-  --color-highlight: #d3d3d3;
-  --color-dark-red: #911d04;
-  --color-light-red: #cf371f;
-  --color-dark-gray: #717171;
-  --color-brown: #ae6e36;
-  --color-dark-brown: #7f4b1c;
-  --color-green: rgb(33, 142, 61);
   --color-yellow: #b6cb49;
-  --color-dark-green: #38642f;
-  --color-blue: #c0edff;
-  --color-gray-shade1: #b8b8b8;
-  --color-gray-shade2: #6c6c6c;
-  --color-gray-shade3: #8f8f8f;
-  --color-light-gray: #d0c7c2;
-  --color-black: #040301;
+  --color-highlight: #d3d3d3;
+  --color-transparent: #00000000;
+
+  --color-plain-white: #fff;
+  --color-white-shade-1: #fbffff;
+  --color-white-shade-2: #eaeaea;
+
+  --color-plain-black: #000;
+  --color-black-shade-1: #292a2a;
+  --color-translucent-black-1: #0000001a;
+  --color-translucent-black-2: #00000033;
+  --color-translucent-black-3: #0000004d;
+  --color-translucent-black-4: #00000066;
+  --color-translucent-black-5: #00000080;
+  --color-translucent-black-07: #00000012;
+  --color-translucent-black-13: #00000021;
+
+  --color-green-shade-1: #4caf50;
+  --color-green-shade-2: #3d8c40;
+  --color-green-shade-3: #218e3d;
+  --color-green-shade-4: #327335;
+  --color-green-shade-5: #38642f;
+  --color-translucent-green-2: #00800033;
+
+  --color-gray-shade-1: #b8b8b8;
+  --color-gray-shade-2: #8f8f8f;
+  --color-gray-shade-3: #7a7a7a;
+  --color-gray-shade-4: #6c6c6c;
+  --color-gray-shade-5: #4d4d4d;
+  --color-translucent-gray-5: #eaeaea80;
+  --color-translucent-gray-25: #ffffff40;
+
+  --color-red-shade-1: #cf371f;
+  --color-red-shade-2: #911d04;
+  --color-translucent-red-5: #ff646480;
+
+  --color-brown-shade-1: #ae6e36;
+  --color-brown-shade-2: #7f4b1c;
+  --color-brown-shade-3: #693d1a;
+
+  --color-blue-shade-1: #c0edff;
+  --color-blue-shade-2: #87ceeb;
 }
 
 /* TODOS: */
 /* z-index */
-/* color variables */
 /* sections 3&4 not touching well */
-/* >, child selectors, and psuedo usage */
 
 * {
   margin: 0;
@@ -43,7 +68,7 @@ body {
   scrollbar-width: none;
   justify-content: center;
   -ms-overflow-style: none;
-  background: var(--color-blue);
+  background: var(--color-blue-shade-1);
 }
 
 body::-webkit-scrollbar,
@@ -66,7 +91,7 @@ audio {
   visibility: hidden;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--color-translucent-black-5);
   animation: fade-in 1s ease 1s forwards;
 }
 
@@ -105,13 +130,13 @@ audio {
 }
 
 #no-button {
-  border: 2px solid var(--color-green);
-  color: var(--color-white);
-  background-color: rgba(0, 128, 0, 0.2);
+  border: 2px solid var(--color-green-shade-3);
+  color: var(--color-plain-white);
+  background-color: var(--color-translucent-green-2);
 }
 
 #yes-button {
-  background-color: var(--color-green);
+  background-color: var(--color-green-shade-3);
 }
 
 .fade-out-animation {
@@ -140,8 +165,8 @@ audio {
   margin: 0 auto;
   background: linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0.25)
+    var(--color-transparent),
+    var(--color-translucent-gray-25)
   );
   animation: drop 0.5s linear infinite;
 }
@@ -176,7 +201,7 @@ audio {
   left: 0;
   width: 35px;
   height: 35px;
-  background-color: var(--color-white);
+  background-color: var(--color-plain-white);
   border-radius: 50%;
   filter: blur(1px);
   box-shadow: 0px 0px 40px 10px white;
@@ -187,9 +212,9 @@ audio {
   width: 100px;
   height: 30px;
   border-radius: 50px;
-  background-color: var(--color-white);
-  background-color: #fbffff;
-  box-shadow: inset 0 -1.5px 5px rgb(234, 234, 234);
+  background-color: var(--color-plain-white);
+  background-color: var(--color-white-shade-1);
+  box-shadow: inset 0 -1.5px 5px var(--color-white-shade-2);
 }
 
 .cloud::before {
@@ -201,8 +226,8 @@ audio {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: var(--color-white);
-  background-color: #fbffff;
+  background-color: var(--color-plain-white);
+  background-color: var(--color-white-shade-1);
 }
 
 .cloud::after {
@@ -213,9 +238,9 @@ audio {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: var(--color-white);
-  background-color: #fbffff;
-  box-shadow: inset -10px 0.1px 5px rgba(234, 234, 234, 0.5);
+  background-color: var(--color-plain-white);
+  background-color: var(--color-white-shade-1);
+  box-shadow: inset -10px 0.1px 5px var(--color-translucent-gray-5);
 }
 
 .cloud:nth-child(2) {
@@ -251,10 +276,10 @@ audio {
   left: -2px;
   width: 5px;
   height: 5px;
-  background-color: var(--color-gray-shade2);
+  background-color: var(--color-gray-shade-4);
   border-radius: 50%;
   z-index: 1;
-  box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 -1px 2px var(--color-translucent-black-3);
 }
 
 .flag-rod {
@@ -262,11 +287,11 @@ audio {
   height: 34px;
   margin-top: -1px;
   margin-bottom: -1px;
-  background-color: var(--color-gray-shade2);
+  background-color: var(--color-gray-shade-4);
   position: relative;
   z-index: 0;
-  box-shadow: inset 0 4px 0.5px rgba(0, 0, 0, 0.3),
-    inset 0 -1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 4px 0.5px var(--color-translucent-black-3),
+    inset 0 -1px 1px var(--color-translucent-black-3);
 }
 
 .flag {
@@ -288,7 +313,7 @@ audio {
   height: 4px;
   width: 5px;
   width: 24px;
-  background-color: var(--color-blue);
+  background-color: var(--color-blue-shade-1);
 }
 
 .flag-section-1 {
@@ -312,8 +337,8 @@ audio {
   transform: rotate(-10.5deg);
   background: linear-gradient(
     90deg,
-    var(--color-light-red) 80%,
-    var(--color-dark-red) 100%
+    var(--color-red-shade-1) 80%,
+    var(--color-red-shade-2) 100%
   );
 }
 
@@ -330,8 +355,8 @@ audio {
   position: absolute;
   background: linear-gradient(
     90deg,
-    var(--color-light-red) 5%,
-    var(--color-dark-red) 100%
+    var(--color-red-shade-1) 5%,
+    var(--color-red-shade-2) 100%
   );
 }
 
@@ -344,7 +369,7 @@ audio {
   overflow: hidden;
   position: absolute;
   border-radius: 50%;
-  background-color: var(--color-blue);
+  background-color: var(--color-blue-shade-1);
   transform: rotate(-8.5deg) translateZ(0);
 }
 
@@ -357,8 +382,8 @@ audio {
   height: 7px;
   position: absolute;
   transform: rotate(8.5deg);
-  background-color: var(--color-dark-red);
-  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.3);
+  background-color: var(--color-red-shade-2);
+  box-shadow: inset 0 2px 2px var(--color-translucent-black-3);
 }
 
 .flag-section-2 {
@@ -379,7 +404,7 @@ audio {
   position: absolute;
   border-radius: 50%;
   transform: rotate(12deg);
-  background-color: var(--color-blue);
+  background-color: var(--color-blue-shade-1);
 }
 
 .flag-section-2::after {
@@ -394,8 +419,8 @@ audio {
   transform: rotate(-5deg);
   background: linear-gradient(
     90deg,
-    var(--color-light-red) 45%,
-    var(--color-dark-red) 100%
+    var(--color-red-shade-1) 45%,
+    var(--color-red-shade-2) 100%
   );
 }
 
@@ -423,10 +448,10 @@ audio {
   transform: translateX(-50%);
   width: 4px;
   height: 4px;
-  background-color: var(--color-light-red);
+  background-color: var(--color-red-shade-1);
   border-radius: 50%;
   z-index: 15;
-  box-shadow: inset 0 -1px 2px var(--color-dark-red);
+  box-shadow: inset 0 -1px 2px var(--color-red-shade-2);
 }
 
 .spire {
@@ -437,9 +462,9 @@ audio {
   height: 64px;
   clip-path: inset(0 0 0 0);
   transform: translateZ(0);
-  background-color: var(--color-light-red);
+  background-color: var(--color-red-shade-1);
   margin-top: -1px;
-  box-shadow: inset -4px 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: inset -4px 0 10px var(--color-translucent-black-3);
 }
 
 .spire::before {
@@ -453,7 +478,7 @@ audio {
   z-index: 1;
   position: absolute;
   transform: rotate(-52deg);
-  background-color: var(--color-blue);
+  background-color: var(--color-blue-shade-1);
 }
 
 .spire::after {
@@ -467,7 +492,7 @@ audio {
   position: absolute;
   z-index: 1;
   transform: rotate(52deg);
-  background-color: var(--color-blue);
+  background-color: var(--color-blue-shade-1);
 }
 
 .spire-highlight {
@@ -479,7 +504,7 @@ audio {
   left: 23px;
   z-index: 10;
   transform: rotate(32.5deg);
-  background-color: rgba(255, 100, 100, 0.5);
+  background-color: var(--color-translucent-red-5);
   filter: blur(2px);
 }
 
@@ -492,17 +517,17 @@ audio {
   left: -15px;
   z-index: 1;
   filter: blur(2px);
-  box-shadow: 30px 30px 50px rgba(0, 0, 0, 0.3);
+  box-shadow: 30px 30px 50px var(--color-translucent-black-3);
 }
 
 .blocks {
-  border-top: 1px var(--color-dark-red) solid;
+  border-top: 1px var(--color-red-shade-2) solid;
   width: 100%;
   height: 100%;
   background: repeating-linear-gradient(
     90deg,
-    var(--color-dark-red),
-    var(--color-dark-red) 1px,
+    var(--color-red-shade-2),
+    var(--color-red-shade-2) 1px,
     transparent 1px,
     transparent 10.6px
   );
@@ -514,9 +539,9 @@ audio {
 
 .stone {
   border-radius: 10px;
-  background-color: var(--color-gray-shade1);
-  box-shadow: inset 0 -2px 2px rgba(0, 0, 0, 0.5),
-    0.5px 0.5px 0 rgba(0, 0, 0, 0.5);
+  background-color: var(--color-gray-shade-1);
+  box-shadow: inset 0 -2px 2px var(--color-translucent-black-5),
+    0.5px 0.5px 0 var(--color-translucent-black-5);
 }
 
 .small-stone {
@@ -547,12 +572,12 @@ audio {
   width: 100px;
   height: 20px;
   position: relative;
-  background-color: var(--color-gray-shade1);
+  background-color: var(--color-gray-shade-1);
   border-top: 1px var(--color-highlight) solid;
   background: linear-gradient(
     90deg,
-    var(--color-gray-shade1) 20%,
-    var(--color-gray-shade2) 100%
+    var(--color-gray-shade-1) 20%,
+    var(--color-gray-shade-4) 100%
   );
   border-bottom-left-radius: 1px;
   border-bottom-right-radius: 1px;
@@ -606,8 +631,8 @@ audio {
   );
   background: linear-gradient(
     90deg,
-    var(--color-gray-shade1) 20%,
-    var(--color-gray-shade2) 100%
+    var(--color-gray-shade-1) 20%,
+    var(--color-gray-shade-4) 100%
   );
   border-top: 1px var(--color-highlight) solid;
 }
@@ -615,12 +640,7 @@ audio {
 .structure-section-3 {
   width: 100px;
   height: 10px;
-  background-color: var(--color-gray-shade2);
-  /* background: linear-gradient(
-    90deg,
-    var(--color-gray-shade3) 0%,
-    var(--color-gray-shade2) 100%
-  ); */
+  background-color: var(--color-gray-shade-4);
   clip-path: polygon(0 0, 100% 0, 94% 100%, 6% 100%);
   margin-top: -0.7px;
 }
@@ -665,17 +685,17 @@ audio {
   align-items: center;
   width: 88px;
   height: 60px;
-  background-color: var(--color-gray-shade1);
+  background-color: var(--color-gray-shade-1);
   background: linear-gradient(
     90deg,
-    var(--color-gray-shade1) 20%,
-    var(--color-gray-shade2) 100%
+    var(--color-gray-shade-1) 20%,
+    var(--color-gray-shade-4) 100%
   );
   margin-top: -0.5px;
   overflow: hidden;
 }
 
-.structure-section-4::after {
+.structure-section-4::before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -684,27 +704,27 @@ audio {
   transform: translateX(-50%) rotate(25deg);
   width: 110px;
   height: 110px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--color-translucent-black-1);
   background-color: inherit;
   border-radius: 50%;
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.1);
+  box-shadow: 20px 20px 50px var(--color-translucent-black-1);
   filter: blur(1px);
 }
 
 .grilles-window {
   border: 0.5px var(--color-highlight) solid;
-  border-bottom: 0.5px var(--color-gray-shade3) solid;
+  border-bottom: 0.5px var(--color-gray-shade-2) solid;
   height: 34px;
   width: 27px;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
   padding: 2px;
-  background-color: var(--color-gray-shade1);
+  background-color: var(--color-gray-shade-1);
   background: linear-gradient(
     45deg,
-    var(--color-gray-shade2) 0% var(--color-gray-shade1) 100%
+    var(--color-gray-shade-4) 0% var(--color-gray-shade-1) 100%
   );
-  box-shadow: 0.8px 0.8px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0.8px 0.8px 0px var(--color-translucent-black-4);
   transform: scale(1.3);
 }
 
@@ -718,8 +738,9 @@ audio {
   position: relative;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
-  box-shadow: inset -1px 0 2px rgba(0, 0, 0, 0.1),
-    inset 1px 0 2px rgba(0, 0, 0, 0.1), inset 0 4px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset -1px 0 2px var(--color-translucent-black-1),
+    inset 1px 0 2px var(--color-translucent-black-1),
+    inset 0 4px 2px var(--color-translucent-black-1);
 }
 
 .grilles-window-opening {
@@ -729,15 +750,14 @@ audio {
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
   margin: 4px 4px 0 4px;
-  background-color: black;
+  background-color: var(--color-plain-black);
 }
 
 .grilles-window-bottom-jamb {
-  /* display: none; */
   height: 4px;
   width: 100%;
   clip-path: polygon(11% 0, 89% 0, 100% 100%, 0% 100%);
-  background-color: var(--color-gray-shade1);
+  background-color: var(--color-gray-shade-1);
 }
 
 .grilles {
@@ -748,7 +768,6 @@ audio {
   bottom: 1.5px;
   left: 50%;
   transform: translateX(-50%);
-  /* border: 0.1px red solid; */
   height: 26px;
   width: 13.5px;
 }
@@ -756,9 +775,9 @@ audio {
 .grilles div {
   width: 1px;
   height: 100%;
-  background-color: var(--color-brown);
+  background-color: var(--color-brown-shade-1);
   border-radius: 0.7px;
-  box-shadow: inset 0.5px 0px 0.5px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0.5px 0px 0.5px var(--color-translucent-black-3);
 }
 
 .grilles div:first-child,
@@ -770,14 +789,12 @@ audio {
   position: relative;
   width: 120px;
   height: 16px;
-  background-color: var(--color-gray-shade1);
+  background-color: var(--color-gray-shade-1);
   background: linear-gradient(
     90deg,
-    var(--color-gray-shade1) 20%,
-    var(--color-gray-shade2) 100%
+    var(--color-gray-shade-1) 20%,
+    var(--color-gray-shade-4) 100%
   );
-  /* border: 1px solid red; */
-  /* margin-top: -0.5px; */
   border-top: 1px var(--color-highlight) solid;
   border-bottom-left-radius: 1px;
   border-bottom-right-radius: 1px;
@@ -803,12 +820,7 @@ audio {
 .structure-section-6 {
   width: 120px;
   height: 16px;
-  background-color: var(--color-gray-shade2);
-  /* background: linear-gradient(
-    90deg,
-    var(--color-gray-shade3) 0%,
-    var(--color-gray-shade2) 100%
-  ); */
+  background-color: var(--color-gray-shade-4);
   clip-path: polygon(0 0, 100% 0, 94% 100%, 6% 100%);
   margin-top: -0.7px;
 }
@@ -837,17 +849,16 @@ audio {
   overflow: hidden;
   width: 106px;
   height: 110px;
-  background-color: var(--color-gray-shade1);
+  background-color: var(--color-gray-shade-1);
   background: linear-gradient(
     90deg,
-    var(--color-gray-shade1) 20%,
-    var(--color-gray-shade2) 100%
+    var(--color-gray-shade-1) 20%,
+    var(--color-gray-shade-4) 100%
   );
-  /* border: 1px solid red; */
   margin-top: -0.5px;
 }
 
-.structure-section-7::after {
+.structure-section-7::before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -856,10 +867,10 @@ audio {
   transform: translateX(-50%) rotate(25deg);
   width: 110px;
   height: 150px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--color-translucent-black-1);
   background-color: inherit;
   border-radius: 50%;
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.1);
+  box-shadow: 20px 20px 50px var(--color-translucent-black-1);
   filter: blur(1px);
 }
 
@@ -891,18 +902,18 @@ audio {
 
 .glass-window {
   border: 0.5px var(--color-highlight) solid;
-  border-bottom: 0.5px var(--color-gray-shade3) solid;
+  border-bottom: 0.5px var(--color-gray-shade-2) solid;
   height: 34px;
   width: 27px;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
   padding: 2px;
-  background-color: var(--color-gray-shade1);
+  background-color: var(--color-gray-shade-1);
   background: linear-gradient(
     45deg,
-    var(--color-gray-shade2) 0% var(--color-gray-shade1) 100%
+    var(--color-gray-shade-4) 0% var(--color-gray-shade-1) 100%
   );
-  box-shadow: 0.8px 0.8px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0.8px 0.8px 0px var(--color-translucent-black-4);
   transform: scale(0.9);
 }
 
@@ -916,8 +927,9 @@ audio {
   position: relative;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
-  box-shadow: inset -1px 0 2px rgba(0, 0, 0, 0.1),
-    inset 1px 0 2px rgba(0, 0, 0, 0.1), inset 0 4px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset -1px 0 2px var(--color-translucent-black-1),
+    inset 1px 0 2px var(--color-translucent-black-1),
+    inset 0 4px 2px var(--color-translucent-black-1);
 }
 
 .glass {
@@ -930,14 +942,14 @@ audio {
   margin: 2px 2px 0 2px;
   background: linear-gradient(
     180deg,
-    var(--color-green) 0%,
+    var(--color-green-shade-3) 0%,
     var(--color-yellow) 100%
   );
   overflow: hidden;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 1px 2px var(--color-translucent-black-5);
 }
 
-.glass::after {
+.glass::before {
   content: "";
   position: absolute;
   z-index: 10;
@@ -945,7 +957,7 @@ audio {
   left: 0;
   width: 100%;
   height: 70%;
-  background-color: rgba(0, 0, 0, 0.07);
+  background-color: var(--color-translucent-black-07);
 }
 
 .glass div:first-child {
@@ -954,7 +966,7 @@ audio {
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: var(--color-dark-green);
+  background-color: var(--color-green-shade-5);
 }
 
 .glass div:last-child {
@@ -964,15 +976,14 @@ audio {
   transform: translateX(-50%);
   width: 1px;
   height: 100%;
-  background-color: var(--color-dark-green);
+  background-color: var(--color-green-shade-5);
 }
 
 .glass-window-bottom-jamb {
-  /* display: none; */
   height: 2px;
   width: 100%;
   clip-path: polygon(8% 0, 92% 0, 100% 100%, 0% 100%);
-  background-color: var(--color-gray-shade1);
+  background-color: var(--color-gray-shade-1);
 }
 
 .door-wrapper {
@@ -981,18 +992,17 @@ audio {
   flex-direction: column;
   width: 56px;
   height: 55px;
-  /* border: 0.1px red solid; */
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
   padding: 2px;
   background: linear-gradient(
     0deg,
-    var(--color-gray-shade1) -20%,
-    var(--color-gray-shade2) 100%
+    var(--color-gray-shade-1) -20%,
+    var(--color-gray-shade-4) 100%
   );
-  /* background: linear-gradient(0deg, var(--color-gray-shade1) -20%, #363638 100%); */
-  box-shadow: inset -1px 0 2px rgba(0, 0, 0, 0.1),
-    inset 1px 0 2px rgba(0, 0, 0, 0.1), inset 0 4px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset -1px 0 2px var(--color-translucent-black-1),
+    inset 1px 0 2px var(--color-translucent-black-1),
+    inset 0 4px 2px var(--color-translucent-black-1);
 }
 
 .door {
@@ -1000,21 +1010,22 @@ audio {
   display: flex;
   width: 100%;
   height: 100%;
-  border: 0.7px #292a2a solid;
+  border: 0.7px var(--color-black-shade-1) solid;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
   background: repeating-linear-gradient(
     90deg,
-    var(--color-dark-brown),
-    var(--color-dark-brown) 11.2%,
-    var(--color-brown) 11.2%,
-    var(--color-brown) 11.9%,
-    #693d1a 11.9%,
-    #693d1a 12.7%
+    var(--color-brown-shade-2),
+    var(--color-brown-shade-2) 11.2%,
+    var(--color-brown-shade-1) 11.2%,
+    var(--color-brown-shade-1) 11.9%,
+    var(--color-brown-shade-3) 11.9%,
+    var(--color-brown-shade-3) 12.7%
   );
   overflow: hidden;
-  box-shadow: inset -1px 0 2px rgba(0, 0, 0, 0.1),
-    inset 1px 0 2px rgba(0, 0, 0, 0.1), inset 0 4px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: inset -1px 0 2px var(--color-translucent-black-1),
+    inset 1px 0 2px var(--color-translucent-black-1),
+    inset 0 4px 1px var(--color-translucent-black-3);
 
   flex-direction: column;
   justify-content: space-between;
@@ -1025,6 +1036,7 @@ audio {
 
 .door-vertical-bar {
   position: absolute;
+  z-index: 1;
   display: flex;
   top: 0;
   left: 50%;
@@ -1032,11 +1044,11 @@ audio {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 4.5px;
+  width: 3px;
   height: 100%;
-  background-color: #7a7a7a;
-  border-left: 0.4px #4d4d4d solid;
-  border-right: 0.4px #989898 solid;
+  background-color: var(--color-gray-shade-3);
+  border-left: 0.4px var(--color-gray-shade-5) solid;
+  border-right: 0.4px var(--color-gray-shade-2) solid;
   padding-top: 1px;
   padding-bottom: 1px;
 }
@@ -1046,8 +1058,8 @@ audio {
   height: 2px;
   transform: scale(0.5);
   border-radius: 50%;
-  background-color: var(--color-gray-shade1);
-  box-shadow: inset 0 -1px 0.8px rgba(0, 0, 0, 0.5);
+  background-color: var(--color-gray-shade-1);
+  box-shadow: inset 0 -1px 0.8px var(--color-translucent-black-5);
 }
 
 .door-horizontal-bar {
@@ -1056,9 +1068,9 @@ audio {
   align-items: center;
   width: 100%;
   height: 4px;
-  background-color: #7a7a7a;
-  border-bottom: 0.6px #4d4d4d solid;
-  border-top: 0.6px #989898 solid;
+  background-color: var(--color-gray-shade-3);
+  border-bottom: 0.6px var(--color-gray-shade-5) solid;
+  border-top: 0.6px var(--color-gray-shade-2) solid;
   padding-left: 2px;
   padding-right: 2px;
 }
@@ -1070,8 +1082,8 @@ audio {
   height: 2px;
   transform: scale(0.7);
   border-radius: 50%;
-  background-color: var(--color-gray-shade1);
-  box-shadow: inset 0 -1px 0.8px rgba(0, 0, 0, 0.5);
+  background-color: var(--color-gray-shade-1);
+  box-shadow: inset 0 -1px 0.8px var(--color-translucent-black-5);
 }
 
 .door-handles {
@@ -1089,11 +1101,11 @@ audio {
   border-radius: 50%;
   border-style: solid;
   border-width: 1px;
-  border-color: #7a7a7a;
+  border-color: var(--color-gray-shade-3);
   position: relative;
-  background-color: rgba(0, 0, 0, 0);
-  box-shadow: inset 0 1px 0.3px rgba(0, 0, 0, 0.3),
-    0 1px 0.3px rgba(0, 0, 0, 0.3);
+  background-color: var(--color-transparent);
+  box-shadow: inset 0 1px 0.3px var(--color-translucent-black-3),
+    0 1px 0.3px var(--color-translucent-black-3);
 }
 
 .door-handle::before {
@@ -1102,14 +1114,14 @@ audio {
   width: 3px;
   height: 3px;
   border-radius: 50%;
-  background-color: #7a7a7a;
+  background-color: var(--color-gray-shade-3);
   position: absolute;
   top: -1.7px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--color-gray-shade1);
-  box-shadow: inset 0 -1.5px 1.3px rgba(0, 0, 0, 0.5),
-    0 0 0.3px rgba(0, 0, 0, 0.5);
+  background-color: var(--color-gray-shade-1);
+  box-shadow: inset 0 -1.5px 1.3px var(--color-translucent-black-5),
+    0 0 0.3px var(--color-translucent-black-5);
 }
 
 .door-bottom-jamb {
@@ -1119,7 +1131,7 @@ audio {
   z-index: 10;
   width: 100%;
   height: 1.6px;
-  background-color: var(--color-gray-shade1);
+  background-color: var(--color-gray-shade-1);
   clip-path: polygon(3.5% 0%, 96.5% 0%, 100% 100%, 0% 100%);
 }
 
@@ -1168,11 +1180,11 @@ audio {
   z-index: 10;
   width: 100%;
   height: 14px;
-  background-color: var(--color-gray-shade1);
+  background-color: var(--color-gray-shade-1);
   background: linear-gradient(
     90deg,
-    var(--color-gray-shade1) 0%,
-    var(--color-gray-shade2) 100%
+    var(--color-gray-shade-1) 0%,
+    var(--color-gray-shade-4) 100%
   );
   clip-path: polygon(4% 0%, 96% 0%, 100% 100%, 0% 100%);
   margin-top: -0.5px;
@@ -1187,7 +1199,6 @@ audio {
   flex-direction: column;
   align-items: center;
   width: 60px;
-  /* height: 10px; */
 }
 
 .stairs-section-1 {
@@ -1202,8 +1213,8 @@ audio {
   height: 4px;
   background: linear-gradient(
     90deg,
-    var(--color-gray-shade1) 0%,
-    var(--color-gray-shade2) 100%
+    var(--color-gray-shade-1) 0%,
+    var(--color-gray-shade-4) 100%
   );
 }
 
@@ -1219,8 +1230,8 @@ audio {
   height: 6px;
   background: linear-gradient(
     90deg,
-    var(--color-gray-shade1) 0%,
-    var(--color-gray-shade2) 100%
+    var(--color-gray-shade-1) 0%,
+    var(--color-gray-shade-4) 100%
   );
 }
 
@@ -1251,7 +1262,7 @@ audio {
   width: 40px;
   height: 60px;
   border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
-  background-color: #4caf50;
+  background-color: var(--color-green-shade-1);
   overflow: hidden;
 }
 
@@ -1264,8 +1275,8 @@ audio {
   width: 100%;
   height: 100%;
   border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
-  background-color: #4caf50;
-  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
+  background-color: var(--color-green-shade-1);
+  box-shadow: 15px 15px 10px var(--color-translucent-black-3);
   filter: blur(4px);
 }
 
@@ -1275,7 +1286,7 @@ audio {
   margin-top: -1px;
   width: 5px;
   height: 40px;
-  background-color: var(--color-brown);
+  background-color: var(--color-brown-shade-1);
   border-radius: 50% 50% 50% 50% / 2% 2% 98% 98%;
 }
 
@@ -1287,9 +1298,9 @@ audio {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--color-brown);
+  background-color: var(--color-brown-shade-1);
   border-radius: 50% 50% 50% 50% / 98% 98% 2% 2%;
-  box-shadow: inset 0 -0.1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 -0.1px 1px var(--color-translucent-black-3);
 }
 
 .tree-trunk::after {
@@ -1300,8 +1311,8 @@ audio {
   left: 0;
   width: 100%;
   height: 90%;
-  background-color: var(--color-brown);
-  box-shadow: inset 0 4px 1px rgba(0, 0, 0, 0.3);
+  background-color: var(--color-brown-shade-1);
+  box-shadow: inset 0 4px 1px var(--color-translucent-black-3);
 }
 
 .tree-shadow {
@@ -1312,7 +1323,7 @@ audio {
   transform: translateX(-50%);
   width: 30px;
   height: 5px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--color-translucent-black-1);
   border-radius: 50%;
   filter: blur(0.5px);
 }
@@ -1334,20 +1345,7 @@ audio {
   transform: translateX(-50%);
   width: 35%;
   height: 3px;
-  background-color: rgba(0, 0, 0, 0.13);
-  border-radius: 50%;
-  filter: blur(3px);
-}
-
-.terrain-container::after {
-  content: "";
-  position: absolute;
-  bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 35%;
-  height: 3px;
-  background-color: rgba(0, 0, 0, 0.13);
+  background-color: var(--color-translucent-black-13);
   border-radius: 50%;
   filter: blur(3px);
 }
@@ -1359,11 +1357,11 @@ audio {
   width: 300px;
   height: 50px;
   border-radius: 50%;
-  background-color: #4caf50;
+  background-color: var(--color-green-shade-1);
   overflow: hidden;
 }
 
-.land::after {
+.land::before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -1373,9 +1371,10 @@ audio {
   width: 90%;
   height: 80%;
   border-radius: 50%;
-  background-color: #4caf50;
-  box-shadow: 0px 0 50px rgba(0, 0, 0, 0.5), 150px 0 50px rgba(0, 0, 0, 0.2),
-    -150px 0 50px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-green-shade-1);
+  box-shadow: 0px 0 50px var(--color-translucent-black-5),
+    150px 0 50px var(--color-translucent-black-2),
+    -150px 0 50px var(--color-translucent-black-2);
   filter: blur(10px);
 }
 
@@ -1387,8 +1386,8 @@ audio {
   width: 30px;
   height: 5px;
   border-radius: 50%;
-  background-color: rgb(192, 233, 249);
-  box-shadow: inset 0 -2px 5px rgba(135, 206, 235, 1);
+  background-color: var(--color-blue-shade-1);
+  box-shadow: inset 0 -2px 5px var(--color-blue-shade-2);
 }
 
 .rain-puddle::before {
@@ -1400,8 +1399,8 @@ audio {
   width: 50px;
   height: 7px;
   border-radius: 50%;
-  background-color: rgb(192, 233, 249);
-  box-shadow: inset 0 -3px 5px rgba(135, 206, 235, 1);
+  background-color: var(--color-blue-shade-1);
+  box-shadow: inset 0 -3px 5px var(--color-blue-shade-2);
 }
 
 .rain-puddle::after {
@@ -1413,8 +1412,8 @@ audio {
   width: 15px;
   height: 2px;
   border-radius: 50%;
-  background-color: rgb(192, 233, 249);
-  box-shadow: inset 0 -0.01px 2px rgba(135, 206, 235, 1);
+  background-color: var(--color-blue-shade-1);
+  box-shadow: inset 0 -0.01px 2px var(--color-blue-shade-2);
 }
 
 .splats-1,
@@ -1433,8 +1432,7 @@ audio {
 .splats-2 > div {
   width: 15px;
   height: 10px;
-  border-top: 2px dotted rgba(255, 255, 255, 0.5);
-  /* border-top: 2px dotted rgb(255, 0, 0); */
+  border-top: 2px dotted var(--color-translucent-gray-5);
   border-radius: 50%;
   opacity: 1;
   transform: scale(0);
@@ -1470,12 +1468,11 @@ audio {
   width: 323px;
   height: 300px;
   border-radius: 50%;
-  background-color: var(--color-dark-brown);
-  background-color: #327335;
+  background-color: var(--color-brown-shade-2);
+  background-color: var(--color-green-shade-4);
   clip-path: inset(0 0 0 0);
   transform: translateX(-50%) translateZ(0);
-  /* box-shadow: inset 0 -5px 40px rgba(0, 0, 0, 0.4); */
-  box-shadow: inset 0 -5px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 -5px 40px var(--color-translucent-black-5);
   overflow: hidden;
 }
 
@@ -1487,7 +1484,7 @@ audio {
   left: 0;
   width: 100%;
   height: 30px;
-  background-color: var(--color-blue);
+  background-color: var(--color-blue-shade-1);
 }
 
 .hill::after {
@@ -1500,8 +1497,8 @@ audio {
   left: 0;
   width: 100%;
   height: 67px;
-  background-color: #4caf50;
-  background-color: #3d8c40;
+  background-color: var(--color-green-shade-1);
+  background-color: var(--color-green-shade-2);
   filter: blur(10px);
 }
 
