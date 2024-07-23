@@ -676,7 +676,7 @@ audio {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 88.5px;
+  width: 88.8px;
   height: 60px;
   background-color: var(--color-gray-shade-1);
   background: linear-gradient(
@@ -684,7 +684,7 @@ audio {
     var(--color-gray-shade-1) 20%,
     var(--color-gray-shade-4) 100%
   );
-  margin-top: -0.7px;
+  margin-top: -0.5px;
   overflow: hidden;
 }
 
