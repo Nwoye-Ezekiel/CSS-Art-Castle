@@ -8,161 +8,202 @@
     <title>Castle</title>
   </head>
   <body>
-    <div class="music-modal-container" id="musicModal">
-      <div class="music-modal">
-        <h3>Enable Music</h3>
-        <div>
-          <button id="noButton">
-            <span>NO</span>
-          </button>
-          <button id="yesButton">
-            <span>YES</span>
-          </button>
-        </div>
-      </div>
-    </div>
-    <audio id="myAudio" preload="auto" loop>
+    <audio preload="auto" loop>
       <source src="audio/soundtrack.opus" type="audio/opus" />
       <source src="audio/soundtrack.ogg" type="audio/ogg" />
       <source src="audio/soundtrack.aac" type="audio/aac" />
       <source src="audio/soundtrack.mp3" type="audio/mpeg" />
     </audio>
-    <div class="rain front-row"></div>
-    <div class="rain back-row"></div>
-    <div class="wrapper">
-      <div class="clouds">
-        <div></div>
-        <div></div>
-        <div></div>
+
+    <!-- <div class="music-modal-wrapper">
+      <div class="music-modal">
+        <h3>Enable Music</h3>
+        <div>
+          <button id="no-button">
+            <span>NO</span>
+          </button>
+          <button id="yes-button">
+            <span>YES</span>
+          </button>
+        </div>
       </div>
-      <div class="main-container">
-        <div class="middle-tower">
-          <div class="roof-container">
-            <div class="flag-container">
-              <div class="head"></div>
-              <div class="flag-stand">
-                <div class="rod"></div>
-                <div class="flag">
-                  <div class="flag-part1">
-                    <div class="flag-part1-circle1"></div>
-                    <div class="flag-part1-square1"></div>
-                    <div class="flag-part1-circle2">
-                      <div class="flag-part1-circle2-square1"></div>
-                    </div>
-                  </div>
-                  <div class="flag-stairs-part12">
-                    <div class="flag-part2-circle1"></div>
-                    <div class="flag-part2-circle2"></div>
-                  </div>
+    </div> -->
+
+    <div class="rain-wrapper"></div>
+
+    <div class="main-wrapper">
+      <div class="clouds">
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+      </div>
+      <div class="castle-wrapper">
+        <div class="roof-wrapper">
+          <div class="flag-wrapper">
+            <div class="flag-stand">
+              <div class="flag-finial"></div>
+              <div class="flag-rod"></div>
+              <div class="flag">
+                <div class="flag-section-1">
+                  <div></div>
                 </div>
+                <div class="flag-section-2"></div>
               </div>
             </div>
+          </div>
+          <div class="spire-wrapper">
             <div class="spire-container">
-              <div class="head"></div>
               <div class="spire">
-                <div class="roof">
-                  <div class="shade"></div>
-                  <div class="highlight"></div>
-                  <div class="circle1"></div>
-                  <div class="circle2"></div>
-                  <div class="brick-row">
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                  </div>
-                  <div class="brick-row">
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                  </div>
-                  <div class="brick-row">
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                  </div>
-                  <div class="brick-row">
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                  </div>
-                  <div class="brick-row">
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                  </div>
-                  <div class="brick-row">
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                  </div>
-                  <div class="brick-row">
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
-                    <div class="brick"></div>
+                <div class="spire-highlight"></div>
+                <div class="spire-shadow"></div>
+                <div class="blocks"></div>
+                <div class="blocks"></div>
+                <div class="blocks"></div>
+                <div class="blocks"></div>
+                <div class="blocks"></div>
+                <div class="blocks"></div>
+                <div class="blocks"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="structure">
+          <div class="section1">
+            <div class="stones">
+              <div>
+                <div class="stone large-stone"></div>
+                <div class="stone small-stone"></div>
+              </div>
+              <div class="stone medium-stone"></div>
+            </div>
+            <div class="section2"></div>
+          </div>
+          <div class="section3"></div>
+          <div class="section4-container">
+            <div class="stones1">
+              <div class="stone medium-stone"></div>
+              <div class="stone large-stone"></div>
+              <div class="stone small-stone"></div>
+            </div>
+            <div class="stones2">
+              <div class="stone small-stone"></div>
+              <div>
+                <div class="stone medium-stone"></div>
+                <div class="stone medium-stone"></div>
+              </div>
+            </div>
+            <div class="section4">
+              <div class="grilles">
+                <div class="inner">
+                  <div class="opened"></div>
+                  <div class="flat"></div>
+                  <div class="irons">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="structure">
-            <div class="part1">
+          <div class="section5">
+            <div class="stones">
+              <div>
+                <div class="stone small-stone"></div>
+                <div class="stone medium-stone"></div>
+              </div>
+              <div class="stone medium-stone"></div>
+            </div>
+          </div>
+          <div class="section6"></div>
+          <div class="section7-container">
+            <div class="stones">
+              <div class="stone small-stone"></div>
+              <div class="stone large-stone"></div>
+              <div class="stone medium-stone"></div>
+            </div>
+            <div class="section7">
               <div class="stones">
+                <div class="stone large-stone"></div>
                 <div>
                   <div class="stone large-stone"></div>
                   <div class="stone small-stone"></div>
                 </div>
-                <div class="stone medium-stone"></div>
-              </div>
-              <div class="part2"></div>
-            </div>
-            <div class="part3"></div>
-            <div class="part4-container">
-              <div class="stones1">
-                <div class="stone medium-stone"></div>
-                <div class="stone large-stone"></div>
                 <div class="stone small-stone"></div>
               </div>
-              <div class="stones2">
-                <div class="stone small-stone"></div>
-                <div>
-                  <div class="stone medium-stone"></div>
-                  <div class="stone medium-stone"></div>
-                </div>
-              </div>
-              <div class="part4">
-                <div class="grilles">
+              <div class="windows">
+                <div class="window">
                   <div class="inner">
-                    <div class="opened"></div>
-                    <div class="flat"></div>
-                    <div class="irons">
+                    <div class="window-closed">
+                      <div></div>
+                      <div></div>
+                    </div>
+                    <div class="window-flat"></div>
+                  </div>
+                </div>
+                <div class="window">
+                  <div class="inner">
+                    <div class="window-closed">
+                      <div></div>
+                      <div></div>
+                    </div>
+                    <div class="window-flat"></div>
+                  </div>
+                </div>
+                <div class="window">
+                  <div class="inner">
+                    <div class="window-closed">
+                      <div></div>
+                      <div></div>
+                    </div>
+                    <div class="window-flat"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="door-container">
+                <div class="door">
+                  <div class="door-side-container">
+                    <div class="door-side-frame">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                    <div class="door-handle-container left-door-handle">
+                      <div class="door-handle"></div>
+                    </div>
+                    <div class="door-side-frame">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  </div>
+                  <div class="door-middle-frame">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                  <div class="door-side-container">
+                    <div class="door-side-frame">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                    <div class="door-handle-container right-door-handle">
+                      <div class="door-handle"></div>
+                    </div>
+                    <div class="door-side-frame">
+                      <div></div>
                       <div></div>
                       <div></div>
                       <div></div>
@@ -170,174 +211,67 @@
                     </div>
                   </div>
                 </div>
+                <div class="door-pavement"></div>
               </div>
             </div>
-            <div class="part5">
-              <div class="stones">
-                <div>
-                  <div class="stone small-stone"></div>
-                  <div class="stone medium-stone"></div>
-                </div>
-                <div class="stone medium-stone"></div>
-              </div>
+          </div>
+          <div class="section8-container">
+            <div class="stones1">
+              <div class="stone medium-stone"></div>
+              <div class="stone small-stone"></div>
             </div>
-            <div class="part6"></div>
-            <div class="part7-container">
-              <div class="stones">
-                <div class="stone small-stone"></div>
-                <div class="stone large-stone"></div>
-                <div class="stone medium-stone"></div>
-              </div>
-              <div class="part7">
-                <div class="stones">
-                  <div class="stone large-stone"></div>
-                  <div>
-                    <div class="stone large-stone"></div>
-                    <div class="stone small-stone"></div>
-                  </div>
-                  <div class="stone small-stone"></div>
-                </div>
-                <div class="windows">
-                  <div class="window">
-                    <div class="inner">
-                      <div class="window-closed">
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="window-flat"></div>
-                    </div>
-                  </div>
-                  <div class="window">
-                    <div class="inner">
-                      <div class="window-closed">
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="window-flat"></div>
-                    </div>
-                  </div>
-                  <div class="window">
-                    <div class="inner">
-                      <div class="window-closed">
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="window-flat"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="door-container">
-                  <div class="door">
-                    <div class="door-side-container">
-                      <div class="door-side-frame">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="door-handle-container left-door-handle">
-                        <div class="door-handle"></div>
-                      </div>
-                      <div class="door-side-frame">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                    </div>
-                    <div class="door-middle-frame">
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                    </div>
-                    <div class="door-side-container">
-                      <div class="door-side-frame">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                      <div class="door-handle-container right-door-handle">
-                        <div class="door-handle"></div>
-                      </div>
-                      <div class="door-side-frame">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="door-pavement"></div>
-                </div>
-              </div>
+            <div class="stones2">
+              <div class="stone large-stone"></div>
+              <div class="stone small-stone"></div>
             </div>
-            <div class="part8-container">
-              <div class="stones1">
-                <div class="stone medium-stone"></div>
-                <div class="stone small-stone"></div>
-              </div>
-              <div class="stones2">
-                <div class="stone large-stone"></div>
-                <div class="stone small-stone"></div>
-              </div>
-              <div class="part8"></div>
-              <div class="stairs">
-                <div class="stairs-part1"></div>
-                <div class="stairs-part2"></div>
-                <div class="stairs-part3"></div>
-                <div class="stairs-part4"></div>
-              </div>
-              <div class="tree tree1">
-                <div class="tree-head"></div>
-                <div class="tree-body"></div>
-                <div class="shadow"></div>
-              </div>
-              <div class="tree tree2">
-                <div class="tree-head"></div>
-                <div class="tree-body"></div>
-                <div class="shadow"></div>
-              </div>
-              <div class="land-container">
-                <div class="land">
-                  <div class="water-spill"></div>
-                  <div class="splat-container1">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                  </div>
-                  <div class="splat-container2">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                  </div>
+            <div class="section8"></div>
+            <div class="stairs">
+              <div class="stairs-section1"></div>
+              <div class="stairs-section2"></div>
+              <div class="stairs-section3"></div>
+              <div class="stairs-section4"></div>
+            </div>
+            <div class="tree tree1">
+              <div class="tree-head"></div>
+              <div class="tree-body"></div>
+              <div class="shadow"></div>
+            </div>
+            <div class="tree tree2">
+              <div class="tree-head"></div>
+              <div class="tree-body"></div>
+              <div class="shadow"></div>
+            </div>
+            <div class="land-container">
+              <div class="land">
+                <div class="water-spill"></div>
+                <div class="splat-container1">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
                 </div>
-                <div class="soil"></div>
+                <div class="splat-container2">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
               </div>
+              <div class="soil"></div>
             </div>
           </div>
         </div>

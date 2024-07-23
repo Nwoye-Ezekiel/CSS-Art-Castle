@@ -1,56 +1,45 @@
 const handleButtonClick = (playAudio) => {
-  if (playAudio) document.getElementById("myAudio").play();
-  document.getElementById("musicModal").classList.add("fade-out");
+  if (playAudio) document.getElementsByTagName("audio")[0].play();
+  document
+    .getElementsByClassName("music-modal-wrapper")[0]
+    .classList.add("fade-out-animation");
 };
 
-document.getElementById("yesButton").addEventListener("click", () => {
+document.getElementById("yes-button").addEventListener("click", () => {
   handleButtonClick(true);
 });
 
-document.getElementById("noButton").addEventListener("click", () => {
+document.getElementById("no-button").addEventListener("click", () => {
   handleButtonClick(false);
 });
 
 document.addEventListener("DOMContentLoaded", () => {
   const makeItRain = () => {
-    let rainElements = document.querySelectorAll(".rain");
-
-    rainElements.forEach(function (rain) {
-      rain.innerHTML = "";
-    });
-
-    let increment = 0;
-    let drops = "";
-    let backDrops = "";
+    let increment = 0, rain = "";
 
     for (let i = 0; i < 100; i++) {
-      let randoHundo = Math.floor(Math.random() * 98) + 1;
-      let randoFiver = Math.floor(Math.random() * 4) + 2;
-      increment += randoFiver;
+      let rand = Math.floor(Math.random() * 101);
+      increment += 1;
+
+      let rainStyle = `
+        left: ${increment}%;
+        animation-delay: 0.${rand}s; 
+        animation-duration: 0.5${rand}s;`;
 
       let dropStyle = `
-        left: ${increment}%; 
-        bottom: ${randoFiver * 2 + 99}%; 
-        animation-delay: 0.${randoHundo}s; 
-        animation-duration: 0.5${randoHundo}s;`;
+        animation-delay: 0.${rand}s; 
+        animation-duration: 0.5${rand}s;`;
 
-      let stemStyle = `
-        animation-delay: 0.${randoHundo}s; 
-        animation-duration: 0.5${randoHundo}s;`;
-
-      drops += `
-        <div class="drop" style="${dropStyle}">
-          <div class="stem" style="${stemStyle}"></div>
-        </div>`;
-
-      backDrops += `
-        <div class="drop" style="${dropStyle.replace("left", "right")}">
-          <div class="stem" style="${stemStyle}"></div>
+      rain += `
+        <div class="rain" style="${rainStyle}">
+          <div class="drop" style="${dropStyle}"></div>
+        </div>
+        <div class="rain" style="${rainStyle.replace("left", "right")}">
+          <div class="drop" style="${dropStyle}"></div>
         </div>`;
     }
 
-    document.querySelector(".rain.front-row").innerHTML = drops;
-    document.querySelector(".rain.back-row").innerHTML = backDrops;
+    document.querySelector(".rain-wrapper").innerHTML = rain;
   };
 
   makeItRain();
