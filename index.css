@@ -100,7 +100,7 @@ audio {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "system-ui", "Trebuchet MS";
+  font-family: "system-ui", "Trebuchet MS", "Helvetica";
 }
 
 .music-modal h3 {
