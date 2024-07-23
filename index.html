@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
-    <title>Castle</title>
+    <title>Castle CSS Art - By Ezekiel Nwoye</title>
   </head>
   <body>
     <audio preload="auto" loop>
@@ -14,8 +14,7 @@
       <source src="audio/soundtrack.aac" type="audio/aac" />
       <source src="audio/soundtrack.mp3" type="audio/mpeg" />
     </audio>
-
-    <!-- <div class="music-modal-wrapper">
+    <div class="music-modal-wrapper">
       <div class="music-modal">
         <h3>Enable Music</h3>
         <div>
@@ -27,10 +26,8 @@
           </button>
         </div>
       </div>
-    </div> -->
-
+    </div>
     <div class="rain-wrapper"></div>
-
     <div class="main-wrapper">
       <div class="clouds">
         <div class="cloud"></div>
@@ -67,8 +64,8 @@
             </div>
           </div>
         </div>
-        <div class="structure">
-          <div class="section1">
+        <div class="structure-wrapper">
+          <div class="structure-section-1">
             <div class="stones">
               <div>
                 <div class="stone large-stone"></div>
@@ -76,28 +73,28 @@
               </div>
               <div class="stone medium-stone"></div>
             </div>
-            <div class="section2"></div>
+            <div class="structure-section-2"></div>
           </div>
-          <div class="section3"></div>
-          <div class="section4-container">
-            <div class="stones1">
+          <div class="structure-section-3"></div>
+          <div class="structure-section-4-wrapper">
+            <div class="stones-1">
               <div class="stone medium-stone"></div>
               <div class="stone large-stone"></div>
               <div class="stone small-stone"></div>
             </div>
-            <div class="stones2">
+            <div class="stones-2">
               <div class="stone small-stone"></div>
               <div>
                 <div class="stone medium-stone"></div>
                 <div class="stone medium-stone"></div>
               </div>
             </div>
-            <div class="section4">
-              <div class="grilles">
-                <div class="inner">
-                  <div class="opened"></div>
-                  <div class="flat"></div>
-                  <div class="irons">
+            <div class="structure-section-4">
+              <div class="grilles-window">
+                <div class="grilles-window-side-jamb">
+                  <div class="grilles-window-opening"></div>
+                  <div class="grilles-window-bottom-jamb"></div>
+                  <div class="grilles">
                     <div></div>
                     <div></div>
                     <div></div>
@@ -107,7 +104,7 @@
               </div>
             </div>
           </div>
-          <div class="section5">
+          <div class="structure-section-5">
             <div class="stones">
               <div>
                 <div class="stone small-stone"></div>
@@ -116,14 +113,14 @@
               <div class="stone medium-stone"></div>
             </div>
           </div>
-          <div class="section6"></div>
-          <div class="section7-container">
+          <div class="structure-section-6"></div>
+          <div class="structure-section-7-wrapper">
             <div class="stones">
               <div class="stone small-stone"></div>
               <div class="stone large-stone"></div>
               <div class="stone medium-stone"></div>
             </div>
-            <div class="section7">
+            <div class="structure-section-7">
               <div class="stones">
                 <div class="stone large-stone"></div>
                 <div>
@@ -132,57 +129,38 @@
                 </div>
                 <div class="stone small-stone"></div>
               </div>
-              <div class="windows">
-                <div class="window">
-                  <div class="inner">
-                    <div class="window-closed">
+              <div class="glass-windows">
+                <div class="glass-window">
+                  <div class="glass-window-side-jamb">
+                    <div class="glass">
                       <div></div>
                       <div></div>
                     </div>
-                    <div class="window-flat"></div>
+                    <div class="glass-window-bottom-jamb"></div>
                   </div>
                 </div>
-                <div class="window">
-                  <div class="inner">
-                    <div class="window-closed">
+                <div class="glass-window">
+                  <div class="glass-window-side-jamb">
+                    <div class="glass">
                       <div></div>
                       <div></div>
                     </div>
-                    <div class="window-flat"></div>
+                    <div class="glass-window-bottom-jamb"></div>
                   </div>
                 </div>
-                <div class="window">
-                  <div class="inner">
-                    <div class="window-closed">
+                <div class="glass-window">
+                  <div class="glass-window-side-jamb">
+                    <div class="glass">
                       <div></div>
                       <div></div>
                     </div>
-                    <div class="window-flat"></div>
+                    <div class="glass-window-bottom-jamb"></div>
                   </div>
                 </div>
               </div>
-              <div class="door-container">
+              <div class="door-wrapper">
                 <div class="door">
-                  <div class="door-side-container">
-                    <div class="door-side-frame">
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                    </div>
-                    <div class="door-handle-container left-door-handle">
-                      <div class="door-handle"></div>
-                    </div>
-                    <div class="door-side-frame">
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                    </div>
-                  </div>
-                  <div class="door-middle-frame">
+                  <div class="door-vertical-bar">
                     <div></div>
                     <div></div>
                     <div></div>
@@ -191,60 +169,69 @@
                     <div></div>
                     <div></div>
                   </div>
-                  <div class="door-side-container">
-                    <div class="door-side-frame">
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                    </div>
-                    <div class="door-handle-container right-door-handle">
-                      <div class="door-handle"></div>
-                    </div>
-                    <div class="door-side-frame">
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                    </div>
+                  <div class="door-horizontal-bar">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                  <div class="door-handles">
+                    <div class="door-handle"></div>
+                    <div class="door-handle"></div>
+                  </div>
+                  <div class="door-horizontal-bar">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                   </div>
                 </div>
-                <div class="door-pavement"></div>
+                <div class="door-bottom-jamb"></div>
               </div>
             </div>
           </div>
-          <div class="section8-container">
-            <div class="stones1">
+          <div class="structure-section-8-wrapper">
+            <div class="stones-1">
               <div class="stone medium-stone"></div>
               <div class="stone small-stone"></div>
             </div>
-            <div class="stones2">
+            <div class="stones-2">
               <div class="stone large-stone"></div>
               <div class="stone small-stone"></div>
             </div>
-            <div class="section8"></div>
+            <div class="structure-section-8"></div>
             <div class="stairs">
-              <div class="stairs-section1"></div>
-              <div class="stairs-section2"></div>
-              <div class="stairs-section3"></div>
-              <div class="stairs-section4"></div>
+              <div class="stairs-section-1"></div>
+              <div class="stairs-section-2"></div>
+              <div class="stairs-section-3"></div>
+              <div class="stairs-section-4"></div>
             </div>
-            <div class="tree tree1">
-              <div class="tree-head"></div>
-              <div class="tree-body"></div>
-              <div class="shadow"></div>
+          </div>
+          <div class="terrain-wrapper">
+            <div class="tree tree-1">
+              <div class="tree-crown"></div>
+              <div class="tree-trunk"></div>
+              <div class="tree-shadow"></div>
             </div>
-            <div class="tree tree2">
-              <div class="tree-head"></div>
-              <div class="tree-body"></div>
-              <div class="shadow"></div>
+            <div class="tree tree-2">
+              <div class="tree-crown"></div>
+              <div class="tree-trunk"></div>
+              <div class="tree-shadow"></div>
             </div>
-            <div class="land-container">
+            <div class="terrain-container">
               <div class="land">
-                <div class="water-spill"></div>
-                <div class="splat-container1">
+                <div class="rain-puddle"></div>
+                <div class="splats-1">
                   <div></div>
                   <div></div>
                   <div></div>
@@ -257,7 +244,7 @@
                   <div></div>
                   <div></div>
                 </div>
-                <div class="splat-container2">
+                <div class="splats-2">
                   <div></div>
                   <div></div>
                   <div></div>
@@ -271,7 +258,7 @@
                   <div></div>
                 </div>
               </div>
-              <div class="soil"></div>
+              <div class="hill"></div>
             </div>
           </div>
         </div>
