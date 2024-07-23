@@ -3,19 +3,20 @@
   --color-highlight: #d3d3d3;
   --color-transparent: #00000000;
 
+  --color-blue-shade-1: #c0edff;
+  --color-blue-shade-2: #87ceeb;
+
+  --color-brown-shade-1: #ae6e36;
+  --color-brown-shade-2: #7f4b1c;
+  --color-brown-shade-3: #693d1a;
+
   --color-plain-white: #fff;
   --color-white-shade-1: #fbffff;
   --color-white-shade-2: #eaeaea;
 
-  --color-plain-black: #000;
-  --color-black-shade-1: #292a2a;
-  --color-translucent-black-1: #0000001a;
-  --color-translucent-black-2: #00000033;
-  --color-translucent-black-3: #0000004d;
-  --color-translucent-black-4: #00000066;
-  --color-translucent-black-5: #00000080;
-  --color-translucent-black-07: #00000012;
-  --color-translucent-black-13: #00000021;
+  --color-red-shade-1: #cf371f;
+  --color-red-shade-2: #911d04;
+  --color-translucent-red-5: #ff646480;
 
   --color-green-shade-1: #4caf50;
   --color-green-shade-2: #3d8c40;
@@ -32,21 +33,16 @@
   --color-translucent-gray-5: #eaeaea80;
   --color-translucent-gray-25: #ffffff40;
 
-  --color-red-shade-1: #cf371f;
-  --color-red-shade-2: #911d04;
-  --color-translucent-red-5: #ff646480;
-
-  --color-brown-shade-1: #ae6e36;
-  --color-brown-shade-2: #7f4b1c;
-  --color-brown-shade-3: #693d1a;
-
-  --color-blue-shade-1: #c0edff;
-  --color-blue-shade-2: #87ceeb;
+  --color-plain-black: #000;
+  --color-black-shade-1: #292a2a;
+  --color-translucent-black-1: #0000001a;
+  --color-translucent-black-2: #00000033;
+  --color-translucent-black-3: #0000004d;
+  --color-translucent-black-4: #00000066;
+  --color-translucent-black-5: #00000080;
+  --color-translucent-black-07: #00000012;
+  --color-translucent-black-13: #00000021;
 }
-
-/* TODOS: */
-/* z-index */
-/* sections 3&4 not touching well */
 
 * {
   margin: 0;
@@ -84,7 +80,7 @@ audio {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 200;
+  z-index: 10;
   width: 100%;
   height: 100%;
   padding: 20px;
@@ -148,8 +144,9 @@ audio {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 100;
+  z-index: 9;
   opacity: 0.8;
+  pointer-events: none;
 }
 
 .rain {
@@ -197,10 +194,10 @@ audio {
 .clouds::before {
   content: "";
   position: absolute;
-  bottom: 55px;
+  bottom: 60px;
   left: 0;
-  width: 35px;
-  height: 35px;
+  width: 34px;
+  height: 34px;
   background-color: var(--color-plain-white);
   border-radius: 50%;
   filter: blur(1px);
@@ -307,7 +304,7 @@ audio {
 .flag::before {
   content: "";
   position: absolute;
-  z-index: 10;
+  z-index: 5;
   bottom: 0;
   left: 0;
   height: 4px;
@@ -450,7 +447,7 @@ audio {
   height: 4px;
   background-color: var(--color-red-shade-1);
   border-radius: 50%;
-  z-index: 15;
+  z-index: 7;
   box-shadow: inset 0 -1px 2px var(--color-red-shade-2);
 }
 
@@ -502,7 +499,7 @@ audio {
   position: absolute;
   top: 6px;
   left: 23px;
-  z-index: 10;
+  z-index: 5;
   transform: rotate(32.5deg);
   background-color: var(--color-translucent-red-5);
   filter: blur(2px);
@@ -564,7 +561,7 @@ audio {
   flex-direction: column;
   align-items: center;
   position: relative;
-  z-index: 10;
+  z-index: 5;
   width: 100px;
 }
 
@@ -683,7 +680,7 @@ audio {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 88px;
+  width: 89px;
   height: 60px;
   background-color: var(--color-gray-shade-1);
   background: linear-gradient(
@@ -691,7 +688,7 @@ audio {
     var(--color-gray-shade-1) 20%,
     var(--color-gray-shade-4) 100%
   );
-  margin-top: -0.5px;
+  margin-top: -0.7px;
   overflow: hidden;
 }
 
@@ -756,7 +753,7 @@ audio {
 .grilles-window-bottom-jamb {
   height: 4px;
   width: 100%;
-  clip-path: polygon(11% 0, 89% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(12% 0, 88% 0, 100% 100%, 0% 100%);
   background-color: var(--color-gray-shade-1);
 }
 
@@ -952,7 +949,7 @@ audio {
 .glass::before {
   content: "";
   position: absolute;
-  z-index: 10;
+  z-index: 5;
   top: 0;
   left: 0;
   width: 100%;
@@ -1128,7 +1125,7 @@ audio {
   position: absolute;
   bottom: 0.4px;
   left: 0;
-  z-index: 10;
+  z-index: 5;
   width: 100%;
   height: 1.6px;
   background-color: var(--color-gray-shade-1);
@@ -1145,7 +1142,7 @@ audio {
 
 .structure-section-8-wrapper .stones-1 {
   position: absolute;
-  z-index: 11;
+  z-index: 6;
   display: flex;
   flex-direction: column;
   gap: 0.8px;
@@ -1160,7 +1157,7 @@ audio {
 
 .structure-section-8-wrapper .stones-2 {
   position: absolute;
-  z-index: 11;
+  z-index: 6;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1177,7 +1174,7 @@ audio {
 
 .structure-section-8 {
   position: relative;
-  z-index: 10;
+  z-index: 5;
   width: 100%;
   height: 14px;
   background-color: var(--color-gray-shade-1);
@@ -1193,7 +1190,7 @@ audio {
 
 .stairs {
   position: absolute;
-  z-index: 10;
+  z-index: 5;
   top: 3px;
   display: flex;
   flex-direction: column;
@@ -1380,7 +1377,7 @@ audio {
 
 .rain-puddle {
   position: absolute;
-  z-index: 20;
+  z-index: 8;
   bottom: 10px;
   left: 60%;
   width: 30px;
@@ -1394,7 +1391,7 @@ audio {
   content: "";
   position: absolute;
   left: -100px;
-  z-index: -2;
+  z-index: -1;
   top: -3px;
   width: 50px;
   height: 7px;
@@ -1419,7 +1416,7 @@ audio {
 .splats-1,
 .splats-2 {
   position: relative;
-  z-index: 100;
+  z-index: 9;
   width: 100%;
   height: 50%;
   display: flex;
@@ -1479,7 +1476,7 @@ audio {
 .hill::before {
   content: "";
   position: absolute;
-  z-index: 10;
+  z-index: 5;
   bottom: 95px;
   left: 0;
   width: 100%;
@@ -1490,7 +1487,7 @@ audio {
 .hill::after {
   content: "";
   position: absolute;
-  z-index: 5;
+  z-index: 4;
   bottom: 62px;
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
